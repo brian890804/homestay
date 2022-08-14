@@ -18,14 +18,17 @@ export default function NavigationBar() {
                     height: '100%'
                 }} >
                 <div
-                    className='row col-12 text-center   '
+                    className='row col-12 text-center'
                     style={{ cursor: 'pointer' }}>
                     {
                         Title.map((data, index) => {
                             return (
                                 <div
-                                    style={{ fontSize: isMobile ? '0.8rem' : '1.5rem' }}
-                                    className='col text-white fw-bolder  '
+                                    style={{
+                                        fontSize: isMobile ? '0.8rem' : '1.5rem',
+                                        textShadow: ' 0px 0px 2px white',
+                                    }}
+                                    className='col text-white fw-bolder'
                                     key={index}>
                                     {data.name}
                                 </div>
