@@ -9,7 +9,7 @@ export default function Title() {
                 fontWeight: '800',
                 textShadow: ' 0px 0px 0.8px black'
             }}>
-            <img src={Logo} alt='logo' width={60} style={{ marginRight: 20 }} />
+            <img src={Logo} alt='logo' style={{ maxWidth: 80, maxHeight: 80 }} />
             九份生活空間民宿
         </div>
     )

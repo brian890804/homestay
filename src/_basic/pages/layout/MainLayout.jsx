@@ -1,19 +1,18 @@
 import Grid from '@mui/material/Grid';
-import { Container } from '@mui/material';
+import { isMobile } from 'react-device-detect';
 export default function MainLayout({ children }) {
     return (
         <Grid
             container
             sx={{
-                // backgroundColor: 'pink',
                 width: "100vw",
-                minHeight: '100vh',
-                padding: 2,
-                overflow:'auto'
+                height: '100vh',
+                overflowX: 'auto',
+                paddingLeft: !isMobile ? '10%' : 0,
+                paddingRight: !isMobile ? '10%' : 0
             }}
-        >   <Container maxWidth="lg">
-                {children}
-            </Container>
+        >
+            {children}
         </Grid>
 
     )

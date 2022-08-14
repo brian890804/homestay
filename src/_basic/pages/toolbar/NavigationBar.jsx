@@ -1,6 +1,7 @@
 
+import { isMobile } from 'react-device-detect';
 export default function NavigationBar() {
-    const Layout = { width: '100%', height: 60, backgroundColor: '#7E417A' }
+    const Layout = { width: '100%', height: 50, backgroundColor: '#7E417A' }
     const Title = [
         { name: '首頁', url: '/main' },
         { name: '關於我們', url: '/about' },
@@ -10,20 +11,21 @@ export default function NavigationBar() {
     ]
     return (
         <div style={Layout}>
-            <div className='row '
+            <div className={`row mx-${isMobile ? 0 : 5}`}
                 style={{
                     alignContent: 'center',
                     justifyContent: 'center',
                     height: '100%'
                 }} >
                 <div
-                    className='col-12 text-center row fs-5'
+                    className='row col-12 text-center   '
                     style={{ cursor: 'pointer' }}>
                     {
                         Title.map((data, index) => {
                             return (
                                 <div
-                                    className='col text-white fw-bolder'
+                                    style={{ fontSize: isMobile ? '0.8rem' : '1.5rem' }}
+                                    className='col text-white fw-bolder  '
                                     key={index}>
                                     {data.name}
                                 </div>
