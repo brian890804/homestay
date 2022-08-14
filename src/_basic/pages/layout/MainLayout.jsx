@@ -8,6 +8,7 @@ export default function MainLayout({ children }) {
                 width: "100vw",
                 height: '100vh',
                 overflowX: 'auto',
+                touchAction: 'none',
                 paddingLeft: !isMobile ? '10%' : 0,
                 paddingRight: !isMobile ? '10%' : 0,
                 minWidth:'100vw'

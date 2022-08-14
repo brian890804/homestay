@@ -9,6 +9,7 @@ export default function FirstPage() {
             <NavigationBar />
             <RoomIntroduction />
             <Introduce />
+            
         </div>
     )
 }

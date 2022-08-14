@@ -26,7 +26,7 @@ export default function NavigationBar() {
                                 <div
                                     style={{
                                         fontSize: isMobile ? '0.8rem' : '1.5rem',
-                                        textShadow: ' 0px 0px 2px white',
+                                        textShadow: ' 0px 0px 1px white',
                                     }}
                                     className='col text-white fw-bolder'
                                     key={index}>
