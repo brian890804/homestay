@@ -1,7 +1,11 @@
 
 import { isMobile } from 'react-device-detect';
 export default function NavigationBar() {
-    const Layout = { width: '100%', height: 50, backgroundColor: '#7E417A' }
+    const Layout = {
+        width: '100%',
+        height: isMobile ? 30 : 50,
+        backgroundColor: '#7E417A'
+    }
     const Title = [
         { name: '首頁', url: '/main' },
         { name: '關於我們', url: '/about' },

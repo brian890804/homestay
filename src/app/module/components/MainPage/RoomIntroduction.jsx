@@ -50,18 +50,19 @@ function TipContent() {
     return (
         <animated.div style={styles} >
             <div style={{
-                fontSize: isMobile ? '0.9em' : '1.2em',
+                fontSize: isMobile ? '0.9em' : '1em',
             }}>
-                THE LIFE SPEACE
+                THE LIFE SPACE
             </div>
             <div style={{
                 display: 'flex',
                 width: '100%',
-                fontSize: isMobile ? '1.6em' : '2.5em',
+                fontSize: isMobile ? '1.6em' : '2em',
                 backgroundColor: '#7E417A',
                 justifyContent: 'center',
                 alignItems: 'center',
                 textShadow: ' 0px 0px 1px white',
+                padding: 10
             }}
                 onClick={() => console.log('123')}
             >房型介紹</div>
@@ -99,6 +100,7 @@ function TipBox() {
             style={{
                 position: 'absolute',
                 zIndex: 1,
+                width: isMobile ? '18vh' : '30vh',
                 bottom: '10%', right: '5%',
                 color: 'white',
             }}>

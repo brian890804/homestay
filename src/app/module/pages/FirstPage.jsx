@@ -8,8 +8,9 @@ export default function FirstPage() {
             <Title />
             <NavigationBar />
             <RoomIntroduction />
-            <Introduce />
-            
+            <div className='mx-3 mt-3' >
+                <Introduce />
+            </div>
         </div>
     )
 }

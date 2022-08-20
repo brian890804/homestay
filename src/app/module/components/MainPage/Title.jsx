@@ -1,12 +1,13 @@
 import Logo from '../../../../assets/Logo/Logo.jpg'
+import { isMobile } from 'react-device-detect';
 export default function Title() {
-    const TitleWidth = 50
+    const TitleHeight = 50
     return (
         <div
-            className='fs-1  align-items-center justify-content-center '
+            className={`fs-${isMobile ? 4 : 1}  align-items-center justify-content-center `}
             style={{
                 display: 'flex',
-                height: TitleWidth,
+                height: TitleHeight,
                 fontWeight: '800',
                 textShadow: ' 0px 0px 0.8px black'
             }}>
@@ -14,8 +15,8 @@ export default function Title() {
                 src={Logo}
                 alt='logo'
                 style={{
-                    maxWidth: TitleWidth - 10,
-                    maxHeight: TitleWidth - 10,
+                    maxWidth: TitleHeight - (isMobile ? 10 : 5),
+                    maxHeight: TitleHeight - (isMobile ? 10 : 5),
                     marginRight: 20
                 }} />
             九份生活空間民宿

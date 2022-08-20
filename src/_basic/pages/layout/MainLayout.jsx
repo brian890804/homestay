@@ -9,9 +9,9 @@ export default function MainLayout({ children }) {
                 height: '100vh',
                 overflowX: 'auto',
                 touchAction: 'none',
-                paddingLeft: !isMobile ? '10%' : 0,
-                paddingRight: !isMobile ? '10%' : 0,
-                minWidth:'100vw'
+                alignContent: 'center',
+                maxWidth: 1200,
+                minWidth: isMobile ? '100vw' : 800
             }}
         >
             {children}
