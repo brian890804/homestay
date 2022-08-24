@@ -4,11 +4,17 @@ import RoomIntroduction from '../components/MainPage/RoomIntroduction'
 import Introduce from "../components/MainPage/Introduce"
 export default function FirstPage() {
     return (
-        <div style={{ height: '100%', width: '100%' }}>
+        <div
+            style={{
+                height: '100%',
+                width: '100%',
+            }}>
             <Title />
             <NavigationBar />
-            <RoomIntroduction />
-            <div className='mx-3 mt-3' >
+            <div style={{ position: 'relative', height: '30%' }}>
+                <RoomIntroduction />
+            </div>
+            <div className='mx-3 mt-3'>
                 <Introduce />
             </div>
         </div>

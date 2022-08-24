@@ -5,7 +5,6 @@ export default function MainLayout({ children }) {
         <Grid
             container
             sx={{
-                width: "100vw",
                 height: '100vh',
                 overflowX: 'auto',
                 touchAction: 'none',

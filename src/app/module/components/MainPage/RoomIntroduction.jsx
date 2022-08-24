@@ -6,7 +6,6 @@ import "swiper/css/pagination";
 import "../css/MainPage/SwiperStyle.css";
 import Room1 from '../../../../assets/Room/Room1.png'
 import Room2 from '../../../../assets/Room/Room2.png'
-import Room3 from '../../../../assets/Room/Room3.png'
 import Room4 from '../../../../assets/Room/Room4.png'
 import Room5 from '../../../../assets/Room/Room5.png'
 import Room6 from '../../../../assets/Room/Room6.png'
@@ -15,9 +14,9 @@ import { useTransition, animated, useSpring } from '@react-spring/web'
 import styles from '../css/MainPage/RoomIntroduction.css'
 export default function RoomIntroduction() {
     SwiperCore.use([Autoplay])
-    const Roooms = [Room1, Room2, Room3, Room4, Room5, Room6]
+    const Roooms = [Room1, Room2, Room4, Room5, Room6]
     return (
-        <div style={{ position: 'relative' }}>
+        <>
             <Swiper
                 className="mySwiper"
                 modules={[Pagination]}
@@ -25,18 +24,17 @@ export default function RoomIntroduction() {
                 pagination={{
                     dynamicBullets: true,
                 }}
-                style={{ height: '30vh' }}
             >
                 <TipBox />
                 {
                     Roooms.map((data, index) =>
                         <SwiperSlide key={index}  >
-                            <img alt='' src={data} />
+                            <img alt='' src={data} style={{ height: '100%' }} />
                         </SwiperSlide>
                     )
                 }
             </Swiper>
-        </div>
+        </>
     )
 }
 function TipContent() {

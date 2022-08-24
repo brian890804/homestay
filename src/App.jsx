@@ -1,7 +1,12 @@
 import MainPage from './app/module/pages/MainPage'
+import './index.css'
 function App() {
   return (
-    <div style={{ display: 'flex', textAlign: 'center', justifyContent: 'center', width: '100vw' }}>
+    <div style={{
+      display: 'flex',
+      justifyContent: 'center',
+      width: '100vw',
+    }}>
       <MainPage />
     </div>
   )

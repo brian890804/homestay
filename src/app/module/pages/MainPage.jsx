@@ -16,7 +16,7 @@ export default function MainPage() {
                 modules={[Pagination]}
                 className="mySwiper"
             >
-                <SwiperSlide style={{ width: '100%' }}> <FirstPage /></SwiperSlide>
+                <SwiperSlide style={{ width: '100%'}}> <FirstPage /></SwiperSlide>
                 <SwiperSlide style={{ width: '100%' }}> <FirstPage /></SwiperSlide>
                 {/* <SwiperSlide>  2</SwiperSlide> */}
                 {/* <FirstPage /> */}
