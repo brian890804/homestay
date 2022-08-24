@@ -7,10 +7,10 @@ export default function Title() {
             className={`fs-${isMobile ? 4 : 1} 
             align-items-center 
             justify-content-center
+            fw-bold
             g-center `}
             style={{
                 height: TitleHeight,
-                fontWeight: '800',
                 textShadow: ' 0px 0px 0.8px black'
             }}>
             <img

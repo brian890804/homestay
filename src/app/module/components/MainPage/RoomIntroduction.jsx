@@ -46,16 +46,15 @@ function TipContent() {
         delay: 350,
     })
     return (
-        <animated.div style={styles} >
+        <animated.div className='fw-bold g-ts-w' style={styles} >
             <div
-                className='g-ts-w'
                 style={{
                     fontSize: isMobile ? '0.9em' : '1em',
                 }}>
                 THE LIFE SPACE
             </div>
             <div
-                className='g-bc g-ts-w'
+                className='g-bc '
                 style={{
                     width: '100%',
                     fontSize: isMobile ? '1.6em' : '2em',
