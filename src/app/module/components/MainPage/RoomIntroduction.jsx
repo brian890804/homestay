@@ -47,21 +47,20 @@ function TipContent() {
     })
     return (
         <animated.div style={styles} >
-            <div style={{
-                fontSize: isMobile ? '0.9em' : '1em',
-            }}>
+            <div
+                className='g-ts-w'
+                style={{
+                    fontSize: isMobile ? '0.9em' : '1em',
+                }}>
                 THE LIFE SPACE
             </div>
-            <div style={{
-                display: 'flex',
-                width: '100%',
-                fontSize: isMobile ? '1.6em' : '2em',
-                backgroundColor: '#7E417A',
-                justifyContent: 'center',
-                alignItems: 'center',
-                textShadow: ' 0px 0px 1px white',
-                padding: 10
-            }}
+            <div
+                className='g-bc g-ts-w'
+                style={{
+                    width: '100%',
+                    fontSize: isMobile ? '1.6em' : '2em',
+                    padding: 10
+                }}
                 onClick={() => console.log('123')}
             >房型介紹</div>
         </animated.div >

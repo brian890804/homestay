@@ -22,16 +22,18 @@ function Title() {
                     borderBottomStyle: 'solid',
                 }}>
                 <label
+                    className="g-bc  g-ts-w"
                     style={{
                         color: 'white',
-                        backgroundColor: '#7E417A',
                         paddingLeft: 10,
                         paddingRight: 10,
-                        paddingTop:5
+                        paddingTop: 5
                     }}>
                     十步路到老街
                 </label>
-                <label> &nbsp;鬧中取靜，隱身於老街巷內中!</label>
+                <label
+                    className="g-ts-b"
+                > &nbsp;鬧中取靜，隱身於老街巷內中!</label>
             </div>
             <div
                 style={{

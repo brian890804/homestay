@@ -5,11 +5,11 @@ import './index.css'
 function App() {
   JudeEnterWindow();
   return (
-    <div style={{
-      display: 'flex',
-      justifyContent: 'center',
-      width: '100vw',
-    }}>
+    <div
+      className='g-center'
+      style={{
+        width: '100vw',
+      }}>
       <MainPage />
     </div>
   )

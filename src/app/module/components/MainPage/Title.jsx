@@ -4,9 +4,11 @@ export default function Title() {
     const TitleHeight = 50
     return (
         <div
-            className={`fs-${isMobile ? 4 : 1}  align-items-center justify-content-center `}
+            className={`fs-${isMobile ? 4 : 1} 
+            align-items-center 
+            justify-content-center
+            g-center `}
             style={{
-                display: 'flex',
                 height: TitleHeight,
                 fontWeight: '800',
                 textShadow: ' 0px 0px 0.8px black'

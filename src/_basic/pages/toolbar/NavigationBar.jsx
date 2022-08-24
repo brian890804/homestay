@@ -16,10 +16,8 @@ export default function NavigationBar() {
     ]
     return (
         <div className='g-bc' style={Layout}>
-            <div className={`row mx-${isMobile ? 0 : 5}`}
+            <div className={`row mx-${isMobile ? 0 : 5} g-center`}
                 style={{
-                    alignContent: 'center',
-                    justifyContent: 'center',
                     height: '100%'
                 }} >
                 <div
@@ -29,11 +27,10 @@ export default function NavigationBar() {
                         Title.map((data, index) => {
                             return (
                                 <div
+                                    className='col g-ts-b g-ts-w text-white fw-bolder'
                                     style={{
                                         fontSize: isMobile ? '0.8rem' : '1.5rem',
-                                        textShadow: ' 0px 0px 1px white,0px 0px 2px black',
                                     }}
-                                    className='col text-white fw-bolder'
                                     key={index}>
                                     {data.name}
                                 </div>

@@ -1,3 +1,14 @@
 .g-bc {
     background-image: linear-gradient(to right, #ad5389, #4f2764);
 }
+.g-center{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.g-ts-w{
+    text-shadow: 0px 0px 1px white;
+}
+.g-ts-b{
+    text-shadow: 0px 0px 1px black;
+}
