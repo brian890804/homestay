@@ -4,7 +4,8 @@ export default function NavigationBar() {
     const Layout = {
         width: '100%',
         height: isMobile ? 30 : 50,
-        backgroundColor: '#7E417A'
+        // backgroundImage: '  linear-gradient(to right, #ad5389, #4f2764)',
+        // backgroundColor: '#7E417A'
     }
     const Title = [
         { name: '首頁', url: '/main' },
@@ -14,7 +15,7 @@ export default function NavigationBar() {
         { name: '交通導引', url: '/traffic' },
     ]
     return (
-        <div style={Layout}>
+        <div className='g-bc' style={Layout}>
             <div className={`row mx-${isMobile ? 0 : 5}`}
                 style={{
                     alignContent: 'center',
@@ -30,7 +31,7 @@ export default function NavigationBar() {
                                 <div
                                     style={{
                                         fontSize: isMobile ? '0.8rem' : '1.5rem',
-                                        textShadow: ' 0px 0px 1px white',
+                                        textShadow: ' 0px 0px 1px white,0px 0px 2px black',
                                     }}
                                     className='col text-white fw-bolder'
                                     key={index}>

@@ -1,6 +1,9 @@
+import JudeEnterWindow from './_basic/other/JudeEnterWindow'
 import MainPage from './app/module/pages/MainPage'
+import './_basic/css/global.css'
 import './index.css'
 function App() {
+  JudeEnterWindow();
   return (
     <div style={{
       display: 'flex',
