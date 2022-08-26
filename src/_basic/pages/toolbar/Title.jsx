@@ -1,6 +1,6 @@
 import { isMobile } from 'react-device-detect';
 export default function Title({ children }) {
-    const Height = isMobile ? 60 : 80
+    const Height = isMobile ? 50 : 80
     return (
         <div
             className="g-bc g-center text-white fw-bold fs-2"

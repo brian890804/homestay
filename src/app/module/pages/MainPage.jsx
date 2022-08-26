@@ -24,8 +24,6 @@ export default function MainPage() {
                 <MoveTop show={show} />
                 <SwiperSlide style={{ width: '100%' }}> <FirstPage /></SwiperSlide>
                 <SwiperSlide style={{ width: '100%' }}> <SecondPage /></SwiperSlide>
-                {/* <SwiperSlide>  2</SwiperSlide> */}
-                {/* <FirstPage /> */}
             </Swiper>
         </MainLayout>
     )
