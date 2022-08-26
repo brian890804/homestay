@@ -10,7 +10,7 @@ export default function MainLayout({ children }) {
                 touchAction: 'none',
                 alignContent: 'center',
                 maxWidth: 1200,
-                minWidth: isMobile ? '100vw' : 800
+                minWidth: isMobile ? '100vw' : 800,
             }}
         >
             {children}

@@ -1,3 +1,4 @@
+import Title from "../../../_basic/pages/toolbar/Title"
 export default function SecondPage() {
     return (
         <div
@@ -5,7 +6,7 @@ export default function SecondPage() {
                 height: '100%',
                 width: '100%',
             }}>
-            123
+            <Title>新北市合法民宿</Title>
         </div>
     )
 }

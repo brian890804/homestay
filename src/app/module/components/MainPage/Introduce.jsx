@@ -44,9 +44,9 @@ function Title() {
                     fontSize: isMobile ? '0.6em' : '0.9em',
                     lineHeight: isMobile ? 2 : 1.4
                 }}
-                className={`col-12 text-start fw-bolder p-0 my-1`}
+                className={`col-12 text-start fw-bolder p-0 my-1 `}
             >
-                生活空间民宿坐落在九份老街中心地段，位處於繁華熱鬧商圈巷弄內,
+                生活空間民宿坐落在九份老街中心地段，位處於繁華熱鬧商圈巷弄內,
                 出門即到老街!在喧囂中為您提供舒適恬靜的休憩空間。
                 生活空間擁有多種时尚摩登、山海景觀套房,
                 全新裝潢,品味獨具，衷心期待您的光臨，感受九份獨具的魅力所在。
@@ -58,14 +58,15 @@ function Title() {
 function Content() {
     let Introduces = [Introduce1, Introduce2]
     return (
-        <div className="row" style={{ height: '100%' }}>
+        <div className="row " >
             {
                 Introduces.map((data, index) =>
-                    <div className="col p-0">
+                    <div className="col g-center" key={index}>
                         <img
                             src={data}
+                            style={{ maxHeight: '30vh' }}
                             alt={`Introduce${index}`}
-                            style={{ height: '100%' }} />
+                        />
                     </div>
                 )
             }
