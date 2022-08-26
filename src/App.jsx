@@ -1,7 +1,8 @@
+import { Suspense, lazy } from 'react'
 import JudeEnterWindow from './_basic/other/JudeEnterWindow'
-import MainPage from './app/module/pages/MainPage'
 import './_basic/css/global.css'
 import './index.css'
+const MainPage = lazy(() => import('./app/module/pages/MainPage'));
 function App() {
   JudeEnterWindow();
   return (
@@ -10,7 +11,9 @@ function App() {
       style={{
         width: '100vw',
       }}>
-      <MainPage />
+      <Suspense fallback={"等等"} >
+        <MainPage />
+      </Suspense>
     </div>
   )
 }

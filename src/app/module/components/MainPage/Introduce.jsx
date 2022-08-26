@@ -1,5 +1,3 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
 import { isMobile } from 'react-device-detect';
 import Introduce1 from '../../../../assets/Introduce/Introduce1.png'
 import Introduce2 from '../../../../assets/Introduce/Introduce2.png'
@@ -14,15 +12,9 @@ export default function Introduce() {
 function Title() {
     return (
         <div className={`fs-${isMobile ? 5 : 2} row  mx-0 mb-2`}>
-            <div className='col-12  text-start fw-bold p-0 mb-2'
-                style={{
-                    fontSize: '0.9em',
-                    borderBottomColor: '#7E417A',
-                    borderBottomWidth: 5,
-                    borderBottomStyle: 'solid',
-                }}>
+            <div className='col-12  text-start fw-bold p-0 mb-2 g-bc' style={{ position: 'relative' }}>
                 <label
-                    className="g-bc  g-ts-w"
+                    className="g-ts-w"
                     style={{
                         color: 'white',
                         paddingLeft: 10,
@@ -32,8 +24,19 @@ function Title() {
                     十步路到老街
                 </label>
                 <label
-                    className="g-ts-b"
-                > &nbsp;鬧中取靜，隱身於老街巷內中!</label>
+                    className="g-ts-b "
+                    style={{
+                        top: 0,
+                        width: '100%',
+                        position: 'absolute',
+                        paddingTop: 2,
+                        fontSize: isMobile ? '0.7em' : '1em',
+                        lineHeight: isMobile ? 2.2 : 1.5,
+                        backgroundColor: 'white',
+                    }}
+                > &nbsp;
+                    鬧中取靜，隱身於老街巷內中!
+                </label>
             </div>
             <div
                 style={{

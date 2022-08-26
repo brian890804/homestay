@@ -1,7 +1,7 @@
 import Logo from '../../../../assets/Logo/Logo.jpg'
 import { isMobile } from 'react-device-detect';
 export default function Title() {
-    const TitleHeight = 50
+    const TitleHeight = isMobile ? 50 : 70
     return (
         <div
             className={`fs-${isMobile ? 4 : 1} 
