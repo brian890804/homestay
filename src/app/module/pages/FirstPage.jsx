@@ -14,7 +14,7 @@ export default function FirstPage() {
             <div style={{ position: 'relative', height: '30vh' }}>
                 <RoomIntroduction />
             </div>
-            <div className='mx-3 mt-3'>
+            <div className='mx-3 mt-3'style={{height:'100%'}}>
                 <Introduce />
             </div>
         </div>

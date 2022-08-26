@@ -77,7 +77,6 @@ function TipBox() {
         },
         enter: [
             { opacity: 1, height: 80, innerHeight: 150 },
-            { transform: 'perspective(600px) rotateX(180deg)' },
         ],
     })
     const runAnimation = useCallback(() => {

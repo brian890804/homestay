@@ -58,7 +58,7 @@ function Title() {
 function Content() {
     let Introduces = [Introduce1, Introduce2]
     return (
-        <div className="row " >
+        <div className="row"  >
             {
                 Introduces.map((data, index) =>
                     <div className="col g-center" key={index}>
