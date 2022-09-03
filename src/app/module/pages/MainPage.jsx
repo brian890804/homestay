@@ -1,33 +1,22 @@
-import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
-import MainLayout from "../../../_basic/pages/layout/MainLayout"
-import MoveTop from "../../../_basic/pages/block/MoveTop";
-import FirstPage from "./FirstPage"
-import SecondPage from "./SecondPage";
-import ThirdPage from "./ThirdPage";
-import '../components/css/MainPage/SwiperStyle.css'
-import "swiper/css/pagination";
-import "swiper/css";
-export default function MainPage() {
-    const [show, set] = useState(false);
+import Title from "../components/MainPage/Title"
+import NavigationBar from "../../../_basic/pages/toolbar/NavigationBar"
+import RoomIntroduction from '../components/MainPage/RoomIntroduction'
+import Introduce from "../components/MainPage/Introduce"
+export default function FirstPage() {
     return (
-        <MainLayout>
-            <Swiper
-                className="mySwiper"
-                direction={"vertical"}
-                style={{ position: 'relative' }}
-                pagination={{
-                    clickable: true,
-                }}
-                onSlideChange={(x) => x.activeIndex > 0 ? set(true) : set(false)}
-                modules={[Pagination]}
-            >
-                <MoveTop show={show} />
-                <SwiperSlide > <FirstPage /></SwiperSlide>
-                <SwiperSlide> <SecondPage /></SwiperSlide>
-                <SwiperSlide> <ThirdPage /></SwiperSlide>
-            </Swiper>
-        </MainLayout>
+        <div
+            style={{
+                height: '100vh',
+                width: '100%',
+            }}>
+            <Title />
+            <NavigationBar />
+            <div style={{ position: 'relative', height: '30vh' }}>
+                <RoomIntroduction />
+            </div>
+            <div className='mx-3 mt-3'style={{height:'100%'}}>
+                <Introduce />
+            </div>
+        </div>
     )
 }
