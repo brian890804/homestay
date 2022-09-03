@@ -7,12 +7,13 @@ export default function MoveTop({ show }) {
         <IconButton
             className='g-bc'
             style={{
-                position: 'fixed',
+                position: 'absolute',
                 bottom: 20,
                 right: 20,
                 zIndex: 999,
                 display: show ? '' : 'none',
-                color: 'white'
+                cursor:'pointer',
+                color: 'white',
             }}
             size="large"
             onClick={() => swiper.slideTo(0)}

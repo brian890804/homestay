@@ -61,7 +61,7 @@ function Content() {
         <div className="row"  >
             {
                 Introduces.map((data, index) =>
-                    <div className="col g-center" key={index}>
+                    <div className="col g-center " key={index}>
                         <img
                             src={data}
                             style={{ maxHeight: '30vh' }}

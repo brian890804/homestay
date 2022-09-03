@@ -9,7 +9,8 @@ export default function MainLayout({ children }) {
                 overflowX: 'auto',
                 touchAction: 'none',
                 alignContent: 'center',
-                maxWidth: 1200,
+                maxWidth: '768px',
+                // maxWidth: 1200,
                 minWidth: isMobile ? '100vw' : 800,
             }}
         >

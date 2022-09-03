@@ -9,7 +9,7 @@ function App() {
     <div
       className='g-center'
       style={{
-        width: '100vw',
+        maxWidth: '100vw',
       }}>
       <Suspense fallback={"等等"} >
         <MainPage />

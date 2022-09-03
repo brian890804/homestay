@@ -19,8 +19,18 @@
 .swiper-pagination-bullet-active {
     background-color: #ad5389 !important;
 }
+
 .swiper-pagination-bullet {
     display: inline-block;
-    width: 0.8rem !important;
-    height: 0.8rem!important;
+    width: 0.5rem !important;
+    height: 0.5rem !important;
+
+}
+
+@media (min-width: 768px) {
+    .swiper-pagination-bullet {
+        display: inline-block;
+        width: 0.6rem !important;
+        height: 0.6rem !important;
+    }
 }
