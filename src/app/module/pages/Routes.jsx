@@ -13,7 +13,7 @@ export default function MainPage() {
     const [show, set] = useState(false);
     return (
         <MainLayout>
-            <Swiper
+            {/* <Swiper
                 className="mySwiper"
                 direction={"vertical"}
                 style={{ position: 'relative' }}
@@ -22,12 +22,12 @@ export default function MainPage() {
                 }}
                 onSlideChange={(x) => x.activeIndex > 0 ? set(true) : set(false)}
                 modules={[Pagination]}
-            >
-                <MoveTop show={show} />
-                <SwiperSlide > <FirstPage /></SwiperSlide>
-                <SwiperSlide> <SecondPage /></SwiperSlide>
-                <SwiperSlide> <ThirdPage /></SwiperSlide>
-            </Swiper>
+            > */}
+            <MoveTop show={show} />
+            <FirstPage />
+            <SecondPage />
+            {/* <ThirdPage /> */}
+            {/* </Swiper> */}
         </MainLayout>
     )
 }

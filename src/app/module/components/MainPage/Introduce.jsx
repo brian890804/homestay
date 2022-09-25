@@ -17,22 +17,21 @@ function Title() {
                     className="g-ts-w"
                     style={{
                         color: 'white',
-                        paddingLeft: 10,
-                        paddingRight: 10,
-                        paddingTop: 5
+                        padding: '3px 20px',
                     }}>
                     十步路到老街
                 </label>
                 <label
-                    className="g-ts-b "
+                    className="g-ts-b"
                     style={{
                         top: 0,
-                        width: '100%',
+                        right:0,
+                        left:230,
                         position: 'absolute',
                         paddingTop: 2,
                         fontSize: isMobile ? '0.7em' : '1em',
                         lineHeight: isMobile ? 2.2 : 1.5,
-                        backgroundColor: 'white',
+                        backgroundColor: '#fff',
                     }}
                 > &nbsp;
                     鬧中取靜，隱身於老街巷內中!
@@ -58,14 +57,14 @@ function Title() {
 function Content() {
     let Introduces = [Introduce1, Introduce2]
     return (
-        <div className="row"  >
+        <div className="row" style={{ width: '100%' }}>
             {
                 Introduces.map((data, index) =>
-                    <div className="col g-center " key={index}>
+                    <div className="col-6 p-2" key={index}>
                         <img
                             src={data}
-                            style={{ maxHeight: '30vh' }}
                             alt={`Introduce${index}`}
+                            style={{ width: '100%' }}
                         />
                     </div>
                 )

@@ -29,7 +29,12 @@ export default function RoomIntroduction() {
                 {
                     Roooms.map((data, index) =>
                         <SwiperSlide key={index}  >
-                            <img alt='' src={data} style={{ height: '100%' }} />
+                            <img alt='' src={data}
+                                style={{
+                                    width: '100%',
+                                    height: '400px',
+                                    objectFit: 'cover'
+                                }} />
                         </SwiperSlide>
                     )
                 }

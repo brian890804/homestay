@@ -5,13 +5,10 @@ export default function MainLayout({ children }) {
         <Grid
             container
             sx={{
-                height: '100vh',
-                overflowX: 'auto',
                 touchAction: 'none',
                 alignContent: 'center',
-                maxWidth: '768px',
-                // maxWidth: 1200,
-                minWidth: isMobile ? '100vw' : 800,
+                justifyContent: 'center',
+                textAlign: 'center',
             }}
         >
             {children}

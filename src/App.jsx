@@ -7,9 +7,8 @@ function App() {
   JudeEnterWindow();
   return (
     <div
-      className='g-center'
       style={{
-        maxWidth: '100vw',
+        backgroundColor: '#fff'
       }}>
       <Suspense fallback={"等等"} >
         <Routes />

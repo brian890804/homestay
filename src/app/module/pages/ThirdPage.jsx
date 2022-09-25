@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import styled from "@emotion/styled";
 import Title from '../../../_basic/pages/toolbar/Title'
 export default function ThirdPage() {

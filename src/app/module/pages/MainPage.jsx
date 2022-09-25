@@ -6,15 +6,15 @@ export default function FirstPage() {
     return (
         <div
             style={{
-                height: '100vh',
+                height: '100%',
                 width: '100%',
             }}>
             <Title />
             <NavigationBar />
-            <div style={{ position: 'relative', height: '30vh' }}>
+            <div >
                 <RoomIntroduction />
             </div>
-            <div className='mx-3 mt-3'style={{height:'100%'}}>
+            <div className='mx-3 mt-3'>
                 <Introduce />
             </div>
         </div>
