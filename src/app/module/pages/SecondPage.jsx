@@ -29,10 +29,10 @@ export default function SecondPage() {
                             北縣觀光局核准合法民宿編號120號  99年1月12日北府觀管字第0990879564號
                         </div>
                     </div>
-                    <div className='row mt-2'>
+                    <div className='row mt-2 '>
                         {
                             RoomItems.map((item, index) =>
-                                <div className='col-4'>
+                                <div className='col-4 p-1'>
                                     <img src={item} alt={`Room${index}`} className="body_introduce_img_item" />
                                 </div>
                             )

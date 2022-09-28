@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 import MainLayout from "../../../_basic/pages/layout/MainLayout"
@@ -9,10 +8,9 @@ import ThirdPage from "./ThirdPage";
 import '../components/css/MainPage/SwiperStyle.css'
 import "swiper/css/pagination";
 import "swiper/css";
-export default function MainPage() {
-    const [show, set] = useState(false);
+export default function MainPage({ show }) {
     return (
-        <MainLayout>
+        <MainLayout >
             {/* <Swiper
                 className="mySwiper"
                 direction={"vertical"}
@@ -26,7 +24,7 @@ export default function MainPage() {
             <MoveTop show={show} />
             <FirstPage />
             <SecondPage />
-            {/* <ThirdPage /> */}
+            <ThirdPage />
             {/* </Swiper> */}
         </MainLayout>
     )

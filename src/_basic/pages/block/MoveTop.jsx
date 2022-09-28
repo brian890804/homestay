@@ -7,16 +7,16 @@ export default function MoveTop({ show }) {
         <IconButton
             className='g-bc'
             style={{
-                position: 'absolute',
-                bottom: 20,
-                right: 20,
+                position: 'fixed',
+                bottom: '5%',
+                right: '15%',
                 zIndex: 999,
                 display: show ? '' : 'none',
-                cursor:'pointer',
+                cursor: 'pointer',
                 color: 'white',
             }}
             size="large"
-            onClick={() => swiper.slideTo(0)}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
             <ArrowUpwardIcon />
         </IconButton>

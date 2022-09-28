@@ -25,8 +25,8 @@ function Title() {
                     className="g-ts-b"
                     style={{
                         top: 0,
-                        right:0,
-                        left:230,
+                        right: 0,
+                        left: 230,
                         position: 'absolute',
                         paddingTop: 2,
                         fontSize: isMobile ? '0.7em' : '1em',
@@ -64,7 +64,7 @@ function Content() {
                         <img
                             src={data}
                             alt={`Introduce${index}`}
-                            style={{ width: '100%' }}
+                            style={{ width: '100%', height: '100%' }}
                         />
                     </div>
                 )
