@@ -1,3 +1,4 @@
+import { Grid } from '@mui/material';
 import { isMobile } from 'react-device-detect';
 import Introduce1 from '../../../../assets/Introduce/Introduce1.png'
 import Introduce2 from '../../../../assets/Introduce/Introduce2.png'
@@ -11,32 +12,35 @@ export default function Introduce() {
 }
 function Title() {
     return (
-        <div className={`fs-${isMobile ? 5 : 2} row  mx-0 mb-2`}>
-            <div className='col-12  text-start fw-bold p-0 mb-2 g-bc' style={{ position: 'relative' }}>
-                <label
+        <div className={`fs-${isMobile ? 5 : 2} row  mt-5 mx-3 `}>
+            <Grid
+                className='col-12  text-start fw-bold p-0 mb-2 g-bc'
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+                spacing={2}
+            >
+                <Grid item sm={3} xs={5.4}
                     className="g-ts-w"
                     style={{
+                        fontSize: '1em',
                         color: 'white',
                         padding: '3px 20px',
                     }}>
                     十步路到老街
-                </label>
-                <label
-                    className="g-ts-b"
+                </Grid>
+                <Grid item sm xs
+                    className="g-ts-b mb-1"
                     style={{
-                        top: 0,
-                        right: 0,
-                        left: 230,
-                        position: 'absolute',
-                        paddingTop: 2,
-                        fontSize: isMobile ? '0.7em' : '1em',
+                        fontSize: isMobile ? '0.6em' : '1em',
                         lineHeight: isMobile ? 2.2 : 1.5,
                         backgroundColor: '#fff',
                     }}
                 > &nbsp;
                     鬧中取靜，隱身於老街巷內中!
-                </label>
-            </div>
+                </Grid>
+            </Grid>
             <div
                 style={{
                     wordBreak: 'break-word',
@@ -51,7 +55,7 @@ function Title() {
                 全新裝潢,品味獨具，衷心期待您的光臨，感受九份獨具的魅力所在。
                 體驗生活空間帶給您前所未有的住宿休閒新享受。頂樓露臺超大景寬與桌椅可一望無際整個九份風景!
             </div>
-        </div>
+        </div >
     )
 }
 function Content() {

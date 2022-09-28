@@ -9,7 +9,7 @@ export default function MoveTop({ show }) {
             style={{
                 position: 'fixed',
                 bottom: '5%',
-                right: '15%',
+                right:'2%',
                 zIndex: 999,
                 display: show ? '' : 'none',
                 cursor: 'pointer',

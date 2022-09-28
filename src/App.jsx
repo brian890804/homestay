@@ -13,7 +13,10 @@ function App() {
     <div
       style={{
         backgroundColor: '#fff',
-        userSelect: 'none'
+        userSelect: 'none',
+        minHeight: '100vh',
+        height: '100%',
+        overflowY: 'auto'
       }}>
       <Suspense fallback={"等等"} >
         <Routes show={show} />

@@ -27,7 +27,10 @@ export default function ThirdPage() {
                     spacing={2}
                 >
                     {
-                        HouseImgItems.map(item => <Grid item sm={6}> <MuiCard item={item} /></Grid>)
+                        HouseImgItems.map(item =>
+                            <Grid item sm={6} xs={12} key={item.name}>
+                                <MuiCard item={item} />
+                            </Grid>)
                     }
                 </Grid>
             </div>

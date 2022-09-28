@@ -1,22 +1,33 @@
-import * as React from 'react';
+import { useState, useCallback } from 'react';
 import styled from "@emotion/styled";
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import { Controlled as ControlledZoom } from 'react-medium-image-zoom'
+import ButtonBG from '../../../assets/Room/Button.png'
+import 'react-medium-image-zoom/dist/styles.css'
 import { CardActionArea } from '@mui/material';
 export default function MuiCard({ item }) {
+    const [control, set] = useState(false);
+    const handleZoomChange = useCallback(shouldZoom => {
+        console.log(shouldZoom, 'shouldZoom')
+        set(shouldZoom)
+    }, [])
     return (
         <MuiCardElement>
-            <CardActionArea className="text-start fw-bold box"  >
-                <CardMedia
-                    component="img"
-                    className="img"
-                    height="300"
-                    src={item.img}
-                    draggable={false}
-                    alt={`img ${item.name}`}
-                />
-            </CardActionArea>
+            <div className="text-start fw-bold "   >
+                <img src={ButtonBG} alt='zoom_button' className='zoom_button' onClick={handleZoomChange} />
+                <ControlledZoom isZoomed={control} onZoomChange={(event) => !event && set(false)}>
+                    <CardMedia
+                        component="img"
+                        className="img"
+                        height="300"
+                        src={item.img}
+                        draggable={false}
+                        alt={`img ${item.name}`}
+                    />
+                </ControlledZoom >
+            </div>
             <CardContent className="text-start fw-bold" >
                 <Typography gutterBottom variant="h5" component="div" >
                     {item.name}
@@ -30,14 +41,22 @@ export default function MuiCard({ item }) {
 }
 
 const MuiCardElement = styled.div`/*  */
+  position:relative;
   width:100%,
   height:100%;
-
-  .img{
-    transition: .5s;
+  transition: .5s;
+  cursor:default;
+  :hover{
+    transform:scale(1.03);
   }
 
-  .box:hover img{
-    transform:scale(1.01);
+  .zoom_button{
+    position: absolute; 
+    top: 0; 
+    z-index: 999;
+    right: 0 ;
+    :hover{
+        transform:scale(1.1);
+    }
   }
 `;

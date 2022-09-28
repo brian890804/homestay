@@ -99,8 +99,9 @@ function TipBox() {
         <div
             style={{
                 position: 'absolute',
+                textAlign:'center',
                 zIndex: 1,
-                width: isMobile ? '18vh' : '30vh',
+                width: isMobile ? '18vh' : '20vh',
                 bottom: '10%', right: '5%',
                 color: 'white',
             }}>
