@@ -16,7 +16,8 @@ function App() {
         userSelect: 'none',
         minHeight: '100vh',
         height: '100%',
-        overflowY: 'auto'
+        overflowY: 'auto',
+        overflowX: 'hidden'
       }}>
       <Suspense fallback={"等等"} >
         <Routes show={show} />

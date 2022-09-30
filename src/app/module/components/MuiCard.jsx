@@ -28,8 +28,8 @@ export default function MuiCard({ item }) {
                     />
                 </ControlledZoom >
             </div>
-            <CardContent className="text-start fw-bold" >
-                <Typography gutterBottom variant="h5" component="div" >
+            <CardContent >
+                <Typography gutterBottom variant="h5" component="div" className="text-start fw-bold"  >
                     {item.name}
                 </Typography>
                 <Typography variant="body1" color="text.secondary" className='fw-bolder'>
@@ -48,6 +48,9 @@ const MuiCardElement = styled.div`/*  */
   cursor:default;
   :hover{
     transform:scale(1.03);
+    background-image:linear-gradient(to right, #ad5389, #4f2764);
+    color:white;
+    opacity:0.9;
   }
 
   .zoom_button{

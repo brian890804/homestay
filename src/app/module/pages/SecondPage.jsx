@@ -32,7 +32,7 @@ export default function SecondPage() {
                     <div className='row mt-2 '>
                         {
                             RoomItems.map((item, index) =>
-                                <div className='col-4 p-1'>
+                                <div className='col-4 p-1' key={index}>
                                     <img src={item} alt={`Room${index}`} className="body_introduce_img_item" />
                                 </div>
                             )
