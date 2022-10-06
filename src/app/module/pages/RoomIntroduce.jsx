@@ -22,7 +22,7 @@ export default function ThirdPage() {
     ]
     return (
         <ThirdPageElement>
-            <Title>房型介紹</Title>
+            <Title id="roomIntroduce">房型介紹</Title>
             <div className='content'>
                 <Grid
                     container

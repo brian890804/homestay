@@ -8,14 +8,14 @@ export default function NavigationBar() {
         height: isMobile ? 30 : 50,
     }
     const Title = [
-        { name: '關於我們' },
-        { name: '房型介紹' },
-        { name: '訂房說明' },
-        { name: '交通導引' },
-        { name: '聯絡我們' },
+        { name: '關於我們', href: '#reservation' },
+        { name: '房型介紹', href: '#roomIntroduce' },
+        { name: '訂房說明', href: '#reservation' },
+        { name: '交通導引', href: '#reservation' },
+        { name: '聯絡我們', href: '#reservation' },
     ]
     return (
-        <div className='g-bc ' style={Layout}>
+        <nav className='g-bc ' style={Layout}>
             <div className={`row mx-${isMobile ? 0 : 5} g-center`}
                 style={{
                     height: '100%'
@@ -26,21 +26,21 @@ export default function NavigationBar() {
                     {
                         Title.map((data, index) => {
                             return (
-                                <div
+                                <a
+                                    href={data.href}
                                     className='col g-ts-b g-ts-w text-white fw-bold '
-                                    onClick={() => swiper.slideTo(index+1)}
                                     style={{
                                         cursor: 'pointer',
                                         fontSize: isMobile ? '0.8rem' : '1.5rem',
                                     }}
                                     key={index}>
                                     {data.name}
-                                </div>
+                                </a>
                             )
                         })
                     }
                 </div>
             </div>
-        </div>
+        </nav>
     )
 }

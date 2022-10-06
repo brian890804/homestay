@@ -12,7 +12,7 @@ import Room6 from '../../../../assets/Room/Room6.png'
 import SwiperCore, { Pagination, Autoplay } from "swiper";
 import { useTransition, animated, useSpring } from '@react-spring/web'
 import styles from '../css/MainPage/RoomIntroduction.css'
-export default function RoomIntroduction() {
+export default function SwiperIntroduction() {
     SwiperCore.use([Autoplay])
     const Roooms = [Room1, Room2, Room4, Room5, Room6]
     return (

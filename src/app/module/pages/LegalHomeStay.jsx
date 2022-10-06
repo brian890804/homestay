@@ -7,11 +7,11 @@ import Room2 from '../../../assets/Room/Room2.png';
 import Room6 from '../../../assets/Room/Room6.png';
 import Room7 from '../../../assets/Room/Room7.png';
 
-export default function SecondPage() {
+export default function LegalHomeStay() {
     const RoomItems = [Room2, Room7, Room6]
     return (
         <SecondPageElement >
-            <Title>新北市合法民宿</Title>
+            <Title id="legalHomeStay">新北市合法民宿</Title>
             <div className="row body ">
                 <div className="col-lg-4 col-xs-12 mb-3 ">
                     <img src={license} className='body_introduce_img_license' alt="logo" />
