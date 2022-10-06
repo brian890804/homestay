@@ -3,6 +3,7 @@ import JudeEnterWindow from './_basic/other/JudeEnterWindow'
 import JudeWheel from './app/module/Event/JudeWheel'
 import './_basic/css/global.css'
 import './index.css'
+import './app/module/components/css/global.scss'
 const Routes = lazy(() => import('./app/module/pages/Routes'));
 function App() {
   const [show, set] = useState(false);
