@@ -1,6 +1,7 @@
 import Title from "../../../_basic/pages/toolbar/Title";
 import map from "../../../assets/Traffic/map.png";
 import position from "../../../assets/Traffic/position.png";
+import useResize from "../Event/Resize";
 
 import IconButton from "@mui/material/IconButton";
 import AltRouteIcon from "@mui/icons-material/AltRoute";
@@ -16,6 +17,7 @@ const LandMarkElement = styled.div`
 `;
 
 const PositionTip = () => {
+  const { isMobile } = useResize();
   const toGoogleRoute = useCallback(
     () => window.open(import.meta.env.VITE_GOOGLEMAP_URL_ROUTE),
     []
@@ -23,14 +25,20 @@ const PositionTip = () => {
   return (
     <PositionTipElement>
       <div className="row">
-        <div className="col-12 title">九份生活民宿</div>
-        <div className="col-9 address mb-2">224新北市瑞芳區烏勢巷6號</div>
-        <div className="col">
+        <div className="col-sm-12 col-8 title">九份生活民宿</div>
+        {!isMobile && (
+          <div className="col-sm-8  address mb-2">224新北市瑞芳區烏勢巷6號</div>
+        )}
+
+        <div className="col-sm-4 col-4">
           <IconButton onClick={toGoogleRoute}>
-            <AltRouteIcon fontSize="large" color="primary" />
+            <AltRouteIcon
+              fontSize={isMobile ? "small" : "large"}
+              color="primary"
+            />
           </IconButton>
         </div>
-        <div className="col-12">
+        <div className="col-12 detail">
           <a
             href={import.meta.env.VITE_GOOGLEMAP_URL_POSITION}
             target={"_blank"}
@@ -48,7 +56,7 @@ const PositionTipElement = styled.div`
   left: 0;
   background-color: #fff;
   max-width: 35%;
-  margin: 1%;
+  margin: 2%;
   padding: 1%;
   display: flex;
   border-radius: 5px;
@@ -62,12 +70,13 @@ const PositionTipElement = styled.div`
   }
 
   @media (max-width: 599px) {
-    max-width: 80%;
+    max-width: 40%;
     .title {
-      font-size: 1.2rem;
-    }
-    .address {
       font-size: 0.8rem;
+    }
+
+    .detail{
+      font-size: 0.4rem;
     }
   }
 `;
