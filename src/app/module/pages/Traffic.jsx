@@ -2,10 +2,50 @@ import Title from "../../../_basic/pages/toolbar/Title";
 import styled from "@emotion/styled";
 import map from "../../../assets/Traffic/map.png";
 import position from "../../../assets/Traffic/position.png";
-import { key } from "../components/Taffic/key";
 import GoogleMapReact from "google-map-react";
 
-const AnyReactComponent = ({ text }) => <div style={{color:'pink'}}>{text}這裡這裡</div>;
+const LandMark = ({ text }) => (
+  <LandMarkElement>{text}這裡這裡</LandMarkElement>
+);
+const LandMarkElement = styled.div`
+  color: pink;
+`;
+
+const PositionTip = () => (
+  <PositionTipElement>
+    <div className="row">
+      <div className="col-12 title">九份生活民宿</div>
+      <div className="col-12 address mb-2">224新北市瑞芳區烏勢巷6號</div>
+      <div className="col-12">
+        <a href={import.meta.env.VITE_GOOGLEMAP_HTML} target={"_blank"}>
+          顯示詳細地圖
+        </a>
+      </div>
+    </div>
+  </PositionTipElement>
+);
+const PositionTipElement = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 25%;
+  margin: 1%;
+  padding: 1%;
+  align-self: center;
+  display: flex;
+  border-radius: 5px;
+
+  .title {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .address {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+`;
+
 export default function Traffic() {
   const defaultProps = {
     center: {
@@ -26,19 +66,16 @@ export default function Traffic() {
         </div>
       </div>
       <div className="bottomArea">
-        <div style={{height:'20vh',widht:'100%'}}>
+        <div style={{ height: "30vh", position: "relative" }}>
           <GoogleMapReact
             yesIWantToUseGoogleMapApiInternals
-            bootstrapURLKeys={{ key: key }}
+            bootstrapURLKeys={{ key: import.meta.env.VITE_GOOGLEMAP_KEY }}
             defaultCenter={defaultProps.center}
             defaultZoom={defaultProps.zoom}
           >
-            <AnyReactComponent
-              lat={25.108}
-              lng={121.8432}
-              text="My Marker"
-            />
+            <LandMark lat={25.108} lng={121.8432} text="My Marker" />
           </GoogleMapReact>
+          <PositionTip />
         </div>
       </div>
     </TrafficElement>
