@@ -128,6 +128,9 @@ const ReservationElement = styled.div`
   .img {
     width: 100%;
     padding-bottom: 5%;
+    @media (max-width:599px){
+      height:350px;
+    }
   }
   .MuiSvgIcon-root {
     width: 15px;

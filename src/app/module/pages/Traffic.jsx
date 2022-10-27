@@ -27,10 +27,10 @@ const PositionTip = () => {
       <div className="row">
         <div className="col-sm-12 col-8 title">九份生活民宿</div>
         {!isMobile && (
-          <div className="col-sm-8  address mb-2">224新北市瑞芳區烏勢巷6號</div>
+          <div className="col-sm-9  address mb-2">224新北市瑞芳區烏勢巷6號</div>
         )}
 
-        <div className="col-sm-4 col-4">
+        <div className="col-sm-3 col-4">
           <IconButton onClick={toGoogleRoute}>
             <AltRouteIcon
               fontSize={isMobile ? "small" : "large"}
