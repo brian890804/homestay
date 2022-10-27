@@ -1,5 +1,6 @@
-import { isMobile } from "react-device-detect";
+import useResize from "../../../app/module/Event/Resize";
 export default function NavigationBar() {
+  const { isMobile } = useResize();
   const Layout = {
     width: "100%",
     height: isMobile ? 30 : 50,
@@ -13,9 +14,7 @@ export default function NavigationBar() {
   ];
   return (
     <nav className="g-bc " style={Layout}>
-      <div
-        className={`row mx-${isMobile ? 0 : 5} g-center h-100`}
-      >
+      <div className={`row mx-${isMobile ? 0 : 5} g-center h-100`}>
         <div className="row col-12 text-center p-0 cursor  flex-nowrap">
           {Title.map((data, index) => {
             return (

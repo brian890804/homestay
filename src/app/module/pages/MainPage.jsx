@@ -7,7 +7,7 @@ export default function MainPage() {
         <div>
             <Title />
             <NavigationBar />
-            <div >
+            <div  >
                 <SwiperIntroduction />
             </div>
             <div className='mx-3 mt-3'>

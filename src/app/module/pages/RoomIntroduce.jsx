@@ -31,7 +31,7 @@ export default function ThirdPage() {
                 >
                     {
                         HouseImgItems.map(item =>
-                            <Grid item sm={6} xs={12} key={item.name}>
+                            <Grid item sm={6} xs={6} key={item.name}>
                                 <MuiCard item={item} />
                             </Grid>)
                     }
