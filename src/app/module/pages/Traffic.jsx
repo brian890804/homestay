@@ -52,7 +52,6 @@ const PositionTipElement = styled.div`
   padding: 1%;
   display: flex;
   border-radius: 5px;
-
   .title {
     font-size: 1.2rem;
     font-weight: 600;
@@ -60,6 +59,16 @@ const PositionTipElement = styled.div`
   .address {
     font-size: 0.8rem;
     font-weight: 500;
+  }
+
+  @media (max-width: 599px) {
+    max-width: 80%;
+    .title {
+      font-size: 1.2rem;
+    }
+    .address {
+      font-size: 0.8rem;
+    }
   }
 `;
 
