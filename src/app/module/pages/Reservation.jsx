@@ -19,31 +19,31 @@ export default function Reservation() {
     <ReservationElement>
       <Title id="reservation">訂房說明</Title>
       <Grid container direction="row" justifyContent="center" spacing={2}>
-        <Grid item sm={6}>
+        <Grid item sm={6} xs={12}>
           <Grid
             container
             direction="row"
             justifyContent="space-around"
             className="px-3 pt-3 fw-bold"
           >
-            <Grid item sm={6} className=" title">
+            <Grid item sm={6} xs={6} className=" title">
               【住房時間】
             </Grid>
-            <Grid item sm={6} className="text-end">
+            <Grid item sm={6} xs={6} className="text-end">
               {Icons.map((icon, index) => (
                 <IconButton key={index} className="icon_button">
                   <icon.source />
                 </IconButton>
               ))}
             </Grid>
-            <Grid item sm={12} className="px-2">
+            <Grid item sm={12} xs={12} className="px-2">
               進房Check in時間為下午03:00-23:30。
             </Grid>
-            <Grid item sm={12} className="px-2">
+            <Grid item sm={12} xs={12} className="px-2">
               退房Check
               out時間為隔日中午12：00前退房，逾期將視情況收取費用（超過30分鐘加收$500)
             </Grid>
-            <Grid item sm={12} className="pt-3 pl-2 fw-bold">
+            <Grid item sm={12} xs={12} className="pt-3 pl-2 fw-bold">
               <Divider />
             </Grid>
           </Grid>
@@ -54,10 +54,10 @@ export default function Reservation() {
             justifyContent="space-around"
             className="px-3 pt-3 fw-bold"
           >
-            <Grid item sm={12} className=" title">
+            <Grid item sm={12} xs={12} className=" title">
               【住房通知】
             </Grid>
-            <Grid item sm={12} className=" title">
+            <Grid item sm={12} xs={12} className=" title">
               <ol
                 style={{ listStyle: "none", fontSize: "16px" }}
                 className="pl-1 "
@@ -90,19 +90,19 @@ export default function Reservation() {
                 </li>
               </ol>
             </Grid>
-            <Grid item sm={12} className="px-2">
+            <Grid item sm={12} xs={12} className="px-2">
               進房Check in時間為下午03:00-23:30。
             </Grid>
-            <Grid item sm={12} className="px-2">
+            <Grid item sm={12} xs={12} className="px-2">
               退房Check
               out時間為隔日中午12：00前退房，逾期將視情況收取費用（超過30分鐘加收$500)
             </Grid>
-            <Grid item sm={12} className="py-3 pl-2 fw-bold">
+            <Grid item sm={12} xs={12} className="py-3 pl-2 fw-bold">
               <Divider />
             </Grid>
           </Grid>
         </Grid>
-        <Grid item sm={6}>
+        <Grid item sm={6} xs={12}>
           <img src={Pic} alt="訂房說明" className="img" />
         </Grid>
       </Grid>

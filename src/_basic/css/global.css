@@ -26,7 +26,17 @@
     height: 0.5rem !important;
 
 }
+.cursor{
+    cursor:pointer;
+}
 
+.flex-nowrap{
+    flex-wrap: nowrap;
+}
+
+.h-100{
+    height: 100%;
+}
 @media (min-width: 768px) {
     .swiper-pagination-bullet {
         display: inline-block;
