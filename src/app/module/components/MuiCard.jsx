@@ -32,7 +32,7 @@ export default function MuiCard({ item }) {
           <CardMedia
             component="img"
             className="img"
-            height={isMobile ? "180" : "300"}
+            height={isMobile ? "150" : "300"}
             src={item.img}
             draggable={false}
             alt={`img ${item.name}`}

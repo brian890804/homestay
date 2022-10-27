@@ -1,5 +1,6 @@
-import { isMobile } from 'react-device-detect';
+import useResize from '../../../app/module/Event/Resize';
 export default function Title({ children, id }) {
+    const {isMobile}=useResize();
     const Height = isMobile ? 50 : 70
     return (
         <div
