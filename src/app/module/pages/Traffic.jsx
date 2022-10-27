@@ -1,8 +1,12 @@
 import Title from "../../../_basic/pages/toolbar/Title";
-import styled from "@emotion/styled";
 import map from "../../../assets/Traffic/map.png";
 import position from "../../../assets/Traffic/position.png";
+
+import IconButton from "@mui/material/IconButton";
+import AltRouteIcon from "@mui/icons-material/AltRoute";
+import styled from "@emotion/styled";
 import GoogleMapReact from "google-map-react";
+import { useCallback } from "react";
 
 const LandMark = ({ text }) => (
   <LandMarkElement>{text}這裡這裡</LandMarkElement>
@@ -11,28 +15,41 @@ const LandMarkElement = styled.div`
   color: pink;
 `;
 
-const PositionTip = () => (
-  <PositionTipElement>
-    <div className="row">
-      <div className="col-12 title">九份生活民宿</div>
-      <div className="col-12 address mb-2">224新北市瑞芳區烏勢巷6號</div>
-      <div className="col-12">
-        <a href={import.meta.env.VITE_GOOGLEMAP_HTML} target={"_blank"}>
-          顯示詳細地圖
-        </a>
+const PositionTip = () => {
+  const toGoogleRoute = useCallback(
+    () => window.open(import.meta.env.VITE_GOOGLEMAP_URL_ROUTE),
+    []
+  );
+  return (
+    <PositionTipElement>
+      <div className="row">
+        <div className="col-12 title">九份生活民宿</div>
+        <div className="col-9 address mb-2">224新北市瑞芳區烏勢巷6號</div>
+        <div className="col">
+          <IconButton onClick={toGoogleRoute}>
+            <AltRouteIcon fontSize="large" color="primary" />
+          </IconButton>
+        </div>
+        <div className="col-12">
+          <a
+            href={import.meta.env.VITE_GOOGLEMAP_URL_POSITION}
+            target={"_blank"}
+          >
+            顯示詳細地圖
+          </a>
+        </div>
       </div>
-    </div>
-  </PositionTipElement>
-);
+    </PositionTipElement>
+  );
+};
 const PositionTipElement = styled.div`
   position: absolute;
   top: 0;
   left: 0;
   background-color: #fff;
-  width: 25%;
+  max-width: 35%;
   margin: 1%;
   padding: 1%;
-  align-self: center;
   display: flex;
   border-radius: 5px;
 
