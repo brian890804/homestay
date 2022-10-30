@@ -1,3 +1,4 @@
+import { useState, useCallback } from "react";
 import Title from "../../../_basic/pages/toolbar/Title";
 import map from "../../../assets/Traffic/map.png";
 import position from "../../../assets/Traffic/position.png";
@@ -7,14 +8,17 @@ import IconButton from "@mui/material/IconButton";
 import AltRouteIcon from "@mui/icons-material/AltRoute";
 import styled from "@emotion/styled";
 import GoogleMapReact from "google-map-react";
-import { useCallback } from "react";
+import RoomIcon from "@mui/icons-material/Room";
 
-const LandMark = ({ text }) => (
-  <LandMarkElement>{text}這裡這裡</LandMarkElement>
-);
-const LandMarkElement = styled.div`
-  color: pink;
-`;
+const LandMark = ({ text, setShow }) => {
+  const onClick = useCallback(() => setShow((pre) => !pre));
+  return (
+    <LandMarkElement onClick={onClick}>
+      <RoomIcon color="warning" fontSize="large" />
+    </LandMarkElement>
+  );
+};
+const LandMarkElement = styled.div``;
 
 const PositionTip = () => {
   const { isMobile } = useResize();
@@ -24,7 +28,7 @@ const PositionTip = () => {
   );
   return (
     <PositionTipElement>
-      <div className="row">
+      <div className="row ">
         <div className="col-sm-12 col-8 title">九份生活民宿</div>
         {!isMobile && (
           <div className="col-sm-9  address mb-2">224新北市瑞芳區烏勢巷6號</div>
@@ -60,6 +64,18 @@ const PositionTipElement = styled.div`
   padding: 1%;
   display: flex;
   border-radius: 5px;
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  animation: fadein 2s ease;
   .title {
     font-size: 1.2rem;
     font-weight: 600;
@@ -75,7 +91,7 @@ const PositionTipElement = styled.div`
       font-size: 0.8rem;
     }
 
-    .detail{
+    .detail {
       font-size: 0.4rem;
     }
   }
@@ -89,6 +105,7 @@ export default function Traffic() {
     },
     zoom: 17,
   };
+  const [show, setShow] = useState(false);
   return (
     <TrafficElement>
       <Title id="reservation">交通導引</Title>
@@ -108,9 +125,14 @@ export default function Traffic() {
             defaultCenter={defaultProps.center}
             defaultZoom={defaultProps.zoom}
           >
-            <LandMark lat={25.108} lng={121.8432} text="My Marker" />
+            <LandMark
+              lat={25.108}
+              lng={121.8432}
+              text="My Marker"
+              setShow={setShow}
+            />
           </GoogleMapReact>
-          <PositionTip />
+          {show && <PositionTip />}
         </div>
       </div>
     </TrafficElement>
@@ -119,6 +141,7 @@ export default function Traffic() {
 
 const TrafficElement = styled.div`
   /*  */
+  transition-duration: 20s;
   .topArea {
     padding: 0% 5%;
     display: flex;

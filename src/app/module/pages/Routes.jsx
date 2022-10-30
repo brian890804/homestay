@@ -1,21 +1,23 @@
 import MoveTop from "../../../_basic/pages/block/MoveTop";
-import MainPage from "./MainPage"
+import MainPage from "./MainPage";
 import LegalHomeStay from "./LegalHomeStay";
 import RoomIntroduce from "./RoomIntroduce";
 import Reservation from "./Reservation";
 import Traffic from "./Traffic";
-import '../components/css/MainPage/SwiperStyle.css'
+import ContactUs from "./ContactUs";
+import "../components/css/MainPage/SwiperStyle.css";
 import "swiper/css/pagination";
 import "swiper/css";
 export default function Routes({ show }) {
-    return (
-        < >
-            <MoveTop show={show} />
-            <MainPage />
-            <LegalHomeStay />
-            <RoomIntroduce />
-            <Reservation />
-            <Traffic />
-        </>
-    )
+  return (
+    <>
+      <MoveTop show={show} />
+      <MainPage />
+      <LegalHomeStay />
+      <RoomIntroduce />
+      <Reservation />
+      <Traffic />
+      <ContactUs />
+    </>
+  );
 }
