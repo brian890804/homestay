@@ -1,4 +1,5 @@
 import useResize from "../../../app/module/Event/Resize";
+import styled from "@emotion/styled";
 export default function NavigationBar() {
   const { isMobile } = useResize();
   const Layout = {
@@ -13,26 +14,36 @@ export default function NavigationBar() {
     { name: "聯絡我們", href: "#contactUs" },
   ];
   return (
-    <nav className="g-bc " style={Layout}>
-      <div className={`row mx-${isMobile ? 0 : 5} g-center h-100`}>
-        <div className="row col-12 text-center p-0 cursor  flex-nowrap">
-          {Title.map((data, index) => {
-            return (
-              <a
-                href={data.href}
-                className="col g-ts-b g-ts-w text-white fw-bold "
-                style={{
-                  whiteSpace: "nowrap",
-                  fontSize: isMobile ? "0.8rem" : "1.5rem",
-                }}
-                key={index}
-              >
-                {data.name}
-              </a>
-            );
-          })}
+    <NavigationBarElement isMobile={isMobile}>
+      <nav className="g-bc " style={Layout}>
+        <div className={`row mx-${isMobile ? 0 : 5} g-center h-100`}>
+          <div className="row col-12 text-center p-0 cursor  flex-nowrap">
+            {Title.map((data, index) => {
+              return (
+                <a
+                  href={data.href}
+                  className="col g-ts-b g-ts-w text-white fw-bold "
+                  style={{}}
+                  key={index}
+                >
+                  {data.name}
+                </a>
+              );
+            })}
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </NavigationBarElement>
   );
 }
+const NavigationBarElement = styled.div`
+  /*  */
+  white-space: nowrap;
+  font-size: ${({ isMobile }) => (isMobile ? "0.8rem" : "1.5rem")};
+  width:100%;
+  height: ${({ isMobile }) => (isMobile ? 30 : 50)};
+  a:hover {
+     text-shadow: 2px 2px black;
+     transition:1s;
+  }
+`;
