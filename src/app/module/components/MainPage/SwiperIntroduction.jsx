@@ -55,6 +55,9 @@ function TipContent() {
     to: { y: -2 },
     delay: 350,
   });
+  function onClick() {
+    window.open(import.meta.env.VITE_BOOKING_URL);
+  }
   return (
     <animated.div className="fw-bold g-ts-w " style={styles}>
       <div
@@ -65,16 +68,26 @@ function TipContent() {
         THE LIFE SPACE
       </div>
       <div
-        className="g-bc "
+        className="g-bc cursor"
         style={{
           width: "100%",
           fontSize: isMobile ? "1.6rem" : "2.2rem",
           whiteSpace: "nowrap",
+          display: "flex",
           padding: 5,
+          justifyContent: "center",
         }}
-        onClick={() => console.log("123")}
+        onClick={onClick}
       >
-        <img src={Calendar} alt="日曆" style={{ width: "30px" }} /> 房型介紹
+        <img
+          src={Calendar}
+          alt="日曆"
+          style={{
+            maxWidth: isMobile ? "35px" : "50px",
+            marginRight: isMobile ? "0.2em" : "0.5em",
+          }}
+        />{" "}
+        查詢空房
       </div>
     </animated.div>
   );
