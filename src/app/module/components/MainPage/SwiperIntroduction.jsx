@@ -102,7 +102,7 @@ const TipContentElement = styled.div`
     width: 100%;
     font-size: ${({ isMobile }) => (isMobile ? "1.2rem" : "2.2rem")};
     white-space: nowrap;
-    padding: 5;
+    padding: 5px;
   }
 
   img {
@@ -140,7 +140,7 @@ function TipBox() {
         position: "absolute",
         textAlign: "center",
         zIndex: 1,
-        width: isMobile ? "35vw" : "15vw",
+        width: isMobile ? "35vw" : "13vw",
         bottom: isMobile ? "5%" : "15%",
         right: "5%",
         color: "white",
