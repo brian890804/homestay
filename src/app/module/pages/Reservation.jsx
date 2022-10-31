@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { Grid } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import styled from "@emotion/styled";
@@ -11,10 +12,36 @@ import Pic from "../../../assets/Reservation/Pic1.png";
 import Divider from "@mui/material/Divider";
 export default function Reservation() {
   let Icons = [
-    { source: PhoneIcon, onClick: () => "" },
-    { source: LetterIcon, onClick: () => "" },
-    { source: ShareIcon, onClick: () => "" },
+    {
+      name: "cellphone",
+      source: PhoneIcon,
+      onClick: () => "",
+      url: "tel:+886-9-86310045",
+    },
+    {
+      name: "letter",
+      source: LetterIcon,
+      onClick: () => "",
+      url: "https://liff.line.me/1645278921-kWRPP32q/?accountId=958fdsep",
+    },
+    { name: "share", source: ShareIcon, onClick: () => "" },
   ];
+  const onClick = useCallback(async (data) => {
+    const { name, url } = data;
+    if (name === "cellphone") {
+      window.location.href = url;
+    } else if (name === "letter") {
+      window.open(url);
+    } else {
+      if (navigator.share) {
+        await navigator.share({
+          title: "九份生活民宿空間",
+          text: "九份最舒適的民宿",
+          url: window.location.href,
+        });
+      }
+    }
+  });
   return (
     <ReservationElement>
       <Title id="reservation">訂房說明</Title>
@@ -30,9 +57,9 @@ export default function Reservation() {
               【住房時間】
             </Grid>
             <Grid item sm={6} xs={6} className="text-end">
-              {Icons.map((icon, index) => (
+              {Icons.map((data, index) => (
                 <IconButton key={index} className="icon_button">
-                  <icon.source />
+                  <data.source onClick={() => onClick(data)} />
                 </IconButton>
               ))}
             </Grid>
@@ -128,8 +155,8 @@ const ReservationElement = styled.div`
   .img {
     width: 100%;
     padding-bottom: 5%;
-    @media (max-width:599px){
-      height:350px;
+    @media (max-width: 599px) {
+      height: 350px;
     }
   }
   .MuiSvgIcon-root {
