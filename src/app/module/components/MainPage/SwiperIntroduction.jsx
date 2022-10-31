@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { isMobile } from "react-device-detect";
 import "swiper/css";
 import "swiper/css/pagination";
 import "../css/MainPage/SwiperStyle.css";
@@ -9,9 +8,12 @@ import Room2 from "../../../../assets/Room/Room2.png";
 import Room4 from "../../../../assets/Room/Room4.png";
 import Room5 from "../../../../assets/Room/Room5.png";
 import Room6 from "../../../../assets/Room/Room6.png";
+import Calendar from "../../../../assets/Room/calendar.png";
+
 import SwiperCore, { Pagination, Autoplay } from "swiper";
 import { useTransition, animated, useSpring } from "@react-spring/web";
 import styles from "../css/MainPage/RoomIntroduction.css";
+import useResize from "../../Event/Resize";
 export default function SwiperIntroduction() {
   SwiperCore.use([Autoplay]);
   const Roooms = [Room1, Room2, Room4, Room5, Room6];
@@ -45,6 +47,7 @@ export default function SwiperIntroduction() {
   );
 }
 function TipContent() {
+  const { isMobile } = useResize();
   const styles = useSpring({
     loop: { reverse: true },
     config: { duration: 300 },
@@ -53,10 +56,10 @@ function TipContent() {
     delay: 350,
   });
   return (
-    <animated.div className="fw-bold g-ts-w" style={styles}>
+    <animated.div className="fw-bold g-ts-w " style={styles}>
       <div
         style={{
-          fontSize: isMobile ? "0.9em" : "1em",
+          fontSize: isMobile ? "0.9rem" : "1.2rem",
         }}
       >
         THE LIFE SPACE
@@ -65,18 +68,20 @@ function TipContent() {
         className="g-bc "
         style={{
           width: "100%",
-          fontSize: isMobile ? "1.6em" : "2em",
-          padding: 10,
+          fontSize: isMobile ? "1.6rem" : "2.2rem",
+          whiteSpace: "nowrap",
+          padding: 5,
         }}
         onClick={() => console.log("123")}
       >
-        房型介紹
+        <img src={Calendar} alt="日曆" style={{ width: "30px" }} /> 房型介紹
       </div>
     </animated.div>
   );
 }
 function TipBox() {
   const ref = useRef([]);
+  const { isMobile } = useResize();
   const [items, set] = useState([]);
   const transitions = useTransition(items, {
     from: {
@@ -102,7 +107,7 @@ function TipBox() {
         position: "absolute",
         textAlign: "center",
         zIndex: 1,
-        width: isMobile ? "18vh" : "20vh",
+        width: isMobile ? "40vw" : "15vw",
         bottom: "10%",
         right: "5%",
         color: "white",

@@ -108,7 +108,7 @@ export default function Traffic() {
   const [show, setShow] = useState(false);
   return (
     <TrafficElement>
-      <Title id="reservation">交通導引</Title>
+      <Title id="traffic">交通導引</Title>
       <div className="topArea">
         <div className="mr-2">
           <img src={map} alt="map" className="img" />

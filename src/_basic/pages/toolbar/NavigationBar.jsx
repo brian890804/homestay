@@ -9,8 +9,8 @@ export default function NavigationBar() {
     { name: "關於我們", href: "#reservation" },
     { name: "房型介紹", href: "#roomIntroduce" },
     { name: "訂房說明", href: "#reservation" },
-    { name: "交通導引", href: "#reservation" },
-    { name: "聯絡我們", href: "#reservation" },
+    { name: "交通導引", href: "#traffic" },
+    { name: "聯絡我們", href: "#contactUs" },
   ];
   return (
     <nav className="g-bc " style={Layout}>

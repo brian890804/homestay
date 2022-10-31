@@ -11,7 +11,7 @@ export default function LegalHomeStay() {
   return (
     <SecondPageElement>
       <Title id="legalHomeStay">新北市合法民宿</Title>
-      <div className="row body ">
+      <div className="row body justify-content-center">
         <div className="col-lg-4 col-6 mb-3 ">
           <img
             src={license}

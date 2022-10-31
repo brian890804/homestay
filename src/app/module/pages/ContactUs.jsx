@@ -6,18 +6,18 @@ import Line from "../../../assets/ContactUs/ContactLine.png";
 import useResize from "../Event/Resize";
 
 export default function ContactUs() {
-  const { isMoible } = useResize();
+  const { isMobile } = useResize();
   return (
-    <ContactUsElement isMoible={isMoible}>
-      <Title id="legalHomeStay">聯絡我們</Title>
+    <ContactUsElement isMobile={isMobile}>
+      <Title id={"contactUs"}>聯絡我們</Title>
       <Grid
         container
         direction="row"
         justifyContent="center"
         alignItems="center"
-        className={isMoible && "p-5"}
+        className={!isMobile && "py-2 px-5"}
       >
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={6}>
           <ol>
             <li>email:legannon24@gmail.com</li>
             <li>LINE官方帳號 ID:@958fdsep</li>
@@ -29,7 +29,7 @@ export default function ContactUs() {
             <li>版權所有為生活空閒民宿。</li>
           </ol>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={6}>
           <img src={Line} alt="Line 導覽" style={{ width: "100%" }} />
         </Grid>
       </Grid>
@@ -41,10 +41,10 @@ const ContactUsElement = styled.div`
   /*  */
   ol {
     list-style: none;
+    margin-top: 2%;
   }
   li {
-    padding-bottom: 2%;
-    font-size: ${({ isMoible }) => (isMoible ? "0.6em" : "0.9em")};
-    line-height: ${({ isMoible }) => (isMoible ? 2 : 1.4)};
+    font-size: 0.9rem;
+    line-height: ${({ isMobile }) => (isMobile ? 2 : 2.5)};
   }
 `;
