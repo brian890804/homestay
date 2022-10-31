@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useRef, useEffect } from "react";
+import styled from "@emotion/styled";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -26,7 +27,6 @@ export default function SwiperIntroduction() {
         pagination={{
           dynamicBullets: true,
         }}
-        style={{ height: "10%" }}
       >
         <TipBox />
         {Roooms.map((data, index) => (
@@ -48,50 +48,70 @@ export default function SwiperIntroduction() {
 }
 function TipContent() {
   const { isMobile } = useResize();
-  const styles = useSpring({
-    loop: { reverse: true },
-    config: { duration: 300 },
-    from: { y: 0 },
-    to: { y: -2 },
-    delay: 350,
-  });
   function onClick() {
     window.open(import.meta.env.VITE_BOOKING_URL);
   }
   return (
-    <animated.div className="fw-bold g-ts-w " style={styles}>
-      <div
-        style={{
-          fontSize: isMobile ? "0.9rem" : "1.2rem",
-        }}
-      >
-        THE LIFE SPACE
+    <TipContentElement className="fw-bold g-ts-w " isMobile={isMobile}>
+      <div className="top">THE LIFE SPACE</div>
+      <div className="g-bc cursor introduce_container" onClick={onClick}>
+        <img src={Calendar} alt="日曆" /> 查詢空房
       </div>
-      <div
-        className="g-bc cursor"
-        style={{
-          width: "100%",
-          fontSize: isMobile ? "1.6rem" : "2.2rem",
-          whiteSpace: "nowrap",
-          display: "flex",
-          padding: 5,
-          justifyContent: "center",
-        }}
-        onClick={onClick}
-      >
-        <img
-          src={Calendar}
-          alt="日曆"
-          style={{
-            maxWidth: isMobile ? "35px" : "50px",
-            marginRight: isMobile ? "0.2em" : "0.5em",
-          }}
-        />{" "}
-        查詢空房
-      </div>
-    </animated.div>
+    </TipContentElement>
   );
 }
+const TipContentElement = styled.div`
+  /*  */
+  @keyframes recharge-move {
+    0% {
+      transform: rotate(0) translateX(0) translateY(5px);
+    }
+
+    10% {
+      transform: rotate(10deg) translateX(5px) translateY(-5px);
+    }
+
+    20% {
+      transform: rotate(0deg) translateX(0) translateY(5px);
+    }
+
+    30% {
+      transform: rotate(-10deg) translateX(-5px) translateY(-5px);
+    }
+
+    40% {
+      transform: rotate(0deg) translateX(0) translateY(5px);
+    }
+
+    50% {
+      transform: rotate(0deg) translateX(0) translateY(0);
+    }
+  }
+  animation: 2.5s recharge-move infinite;
+  animation-delay:3s;
+
+  .top {
+    margin-top: 5%;
+    font-size: ${({ isMobile }) => (isMobile ? "0.6rem" : "1.2rem")};
+  }
+
+  .introduce_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: ${({ isMobile }) => (isMobile ? "1.2rem" : "2.2rem")};
+    white-space: nowrap;
+    padding: 5;
+  }
+
+  img {
+    max-width: ${({ isMobile }) => (isMobile ? "25px" : "35px")};
+    max-height: ${({ isMobile }) => (isMobile ? "25px" : "35px")};
+    margin-right: 0.2em;
+  }
+`;
+
 function TipBox() {
   const ref = useRef([]);
   const { isMobile } = useResize();
@@ -120,8 +140,8 @@ function TipBox() {
         position: "absolute",
         textAlign: "center",
         zIndex: 1,
-        width: isMobile ? "40vw" : "15vw",
-        bottom: "10%",
+        width: isMobile ? "35vw" : "15vw",
+        bottom: isMobile ? "5%" : "15%",
         right: "5%",
         color: "white",
       }}

@@ -13,7 +13,7 @@ export default function Introduce() {
 function Title() {
   const { isMobile } = useResize();
   return (
-    <div className={`fs-${isMobile ? 6 : 2} mt-5 mx-${isMobile ? 1 : 3} `}>
+    <div className={`fs-${isMobile ? 6 : 2} mt-5 mx-${isMobile ? 3 : 3} `}>
       <Grid
         className="text-start fw-bold p-0 mb-2 g-bc"
         container
@@ -25,12 +25,11 @@ function Title() {
         <Grid
           item
           sm={3}
-          xs={5.4}
           className="g-ts-w"
           style={{
             fontSize: "1em",
             color: "white",
-            padding: "3px 20px",
+            padding: isMobile ?"0px 10px":"3px 20px",
           }}
         >
           十步路到老街
