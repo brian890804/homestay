@@ -16,6 +16,10 @@
     text-shadow: 0px 0px 1px black;
 }
 
+.g-ts-p {
+    text-shadow: 0px 0px 1px #986795;
+}
+
 .swiper-pagination-bullet-active {
     background-color: #ad5389 !important;
 }
