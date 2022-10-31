@@ -5,9 +5,7 @@ import RoomIntroduce from "./RoomIntroduce";
 import Reservation from "./Reservation";
 import Traffic from "./Traffic";
 import ContactUs from "./ContactUs";
-import "../components/css/MainPage/SwiperStyle.css";
-import "swiper/css/pagination";
-import "swiper/css";
+import FooterIntroduce from "./FooterIntroduce";
 export default function Routes({ show }) {
   return (
     <>
@@ -18,6 +16,7 @@ export default function Routes({ show }) {
       <Reservation />
       <Traffic />
       <ContactUs />
+      <FooterIntroduce />
     </>
   );
 }

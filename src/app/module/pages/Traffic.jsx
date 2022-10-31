@@ -100,8 +100,8 @@ const PositionTipElement = styled.div`
 export default function Traffic() {
   const defaultProps = {
     center: {
-      lat: 25.108,
-      lng: 121.8432,
+      lat: 25.1086269,
+      lng: 121.8454328,
     },
     zoom: 17,
   };
