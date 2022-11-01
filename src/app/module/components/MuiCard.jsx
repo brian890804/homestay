@@ -3,19 +3,13 @@ import styled from "@emotion/styled";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Controlled as ControlledZoom } from "react-medium-image-zoom";
-import "react-medium-image-zoom/dist/styles.css";
-import useResize from "../Event/Resize";
 
+import FloatIntroduce from "../pages/FloatIntroduce";
+import useResize from "../Event/Resize";
 import ButtonBG from "../../../assets/Room/Button.png";
 
 export default function MuiCard({ item }) {
-  const [control, set] = useState(false);
   const { isMobile } = useResize();
-  const handleZoomChange = useCallback((shouldZoom) => {
-    console.log(shouldZoom, "shouldZoom");
-    set(shouldZoom);
-  }, []);
   return (
     <MuiCardElement>
       <div className="text-start fw-bold ">
@@ -23,12 +17,8 @@ export default function MuiCard({ item }) {
           src={ButtonBG}
           alt="zoom_button"
           className="zoom_button"
-          onClick={handleZoomChange}
+          // onClick={handleZoomChange}
         />
-        <ControlledZoom
-          isZoomed={control}
-          onZoomChange={(event) => !event && set(false)}
-        >
           <CardMedia
             component="img"
             className="img"
@@ -37,7 +27,6 @@ export default function MuiCard({ item }) {
             draggable={false}
             alt={`img ${item.name}`}
           />
-        </ControlledZoom>
       </div>
       <CardContent>
         <Typography
