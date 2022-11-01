@@ -10,7 +10,7 @@ export default function MoveTop({ show }) {
                 position: 'fixed',
                 bottom: '5%',
                 right:'2%',
-                zIndex: 999,
+                zIndex: 20,
                 display: show ? '' : 'none',
                 cursor: 'pointer',
                 color: 'white',

@@ -15,16 +15,14 @@ export default function Reservation() {
     {
       name: "cellphone",
       source: PhoneIcon,
-      onClick: () => "",
       url: "tel:+886-9-86310045",
     },
     {
       name: "letter",
       source: LetterIcon,
-      onClick: () => "",
       url: "https://liff.line.me/1645278921-kWRPP32q/?accountId=958fdsep",
     },
-    { name: "share", source: ShareIcon, onClick: () => "" },
+    { name: "share", source: ShareIcon },
   ];
   const onClick = useCallback(async (data) => {
     const { name, url } = data;
@@ -58,8 +56,12 @@ export default function Reservation() {
             </Grid>
             <Grid item sm={6} xs={6} className="text-end">
               {Icons.map((data, index) => (
-                <IconButton key={index} className="icon_button">
-                  <data.source onClick={() => onClick(data)} />
+                <IconButton
+                  key={index}
+                  className="icon_button"
+                  onClick={() => onClick(data)}
+                >
+                  <data.source />
                 </IconButton>
               ))}
             </Grid>

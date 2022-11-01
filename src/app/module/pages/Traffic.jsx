@@ -64,7 +64,7 @@ const PositionTipElement = styled.div`
   padding: 1%;
   display: flex;
   border-radius: 5px;
-  @keyframes fadein {
+  @keyframes fadeIn {
     0% {
       opacity: 0;
     }
@@ -75,7 +75,7 @@ const PositionTipElement = styled.div`
       opacity: 1;
     }
   }
-  animation: fadein 2s ease;
+  animation: fadeIn 2s ease;
   .title {
     font-size: 1.2rem;
     font-weight: 600;
