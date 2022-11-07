@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Grid from "@mui/material/Grid";
 import styled from "@emotion/styled";
 import useResize from "../Event/Resize";
@@ -6,6 +7,8 @@ import shop2 from "../../../assets/FooterIntroduce/shop-2.png";
 
 export default function FooterIntroduce() {
   const { isMobile } = useResize();
+  const [fixHeight, setFixHeight] = useState(null);
+  console.log(fixHeight, "fixHeight");
   return (
     <FooterIntroduceElement isMobile={isMobile}>
       <Grid
@@ -47,11 +50,18 @@ export default function FooterIntroduce() {
         alignItems="center"
         spacing={1}
       >
-        <Grid item xs={6} sm={6}>
-          <img src={shop1} alt="九份李儀餅店" />
+        <Grid item xs={7} sm={7}>
+          <img src={shop1} data-src={shop1} alt="九份李儀餅店" />
         </Grid>
-        <Grid item xs={6} sm={6}>
-          <img src={shop2} alt="李儀餅店" />
+        <Grid item xs={5} sm={5}>
+          <img
+            src={shop2}
+            alt="李儀餅店"
+            style={{
+              backgroundSize:'contain',
+
+            }}
+          />
         </Grid>
       </Grid>
       <Grid
@@ -62,11 +72,11 @@ export default function FooterIntroduce() {
         alignItems="center"
         spacing={1}
       >
-        <Grid item sm={6} xs={6}>
+        <Grid item sm={7} xs={7}>
           <label className="title_purple_block mr-2">&nbsp;</label>
           九份總店
         </Grid>
-        <Grid item sm={6} xs={6}>
+        <Grid item sm={5} xs={5}>
           <label className="title_purple_block mr-2">&nbsp;</label>
           台北分店
         </Grid>
@@ -79,7 +89,7 @@ export default function FooterIntroduce() {
         alignItems=""
         spacing={1}
       >
-        <Grid item sm={6} xs={6}>
+        <Grid item sm={7} xs={7}>
           <li>
             <ol>九份總店：台北縣瑞芳鎮九份汽車路18號(7-11的對面)</ol>
             <ol>訂貨專線：(02)2496-5628 手機：0955798018</ol>
@@ -87,8 +97,8 @@ export default function FooterIntroduce() {
             <ol>營業時間：9:00-17:00</ol>
           </li>
         </Grid>
-        <Grid item sm={6} xs={6}>
-        <li>
+        <Grid item sm={5} xs={5}>
+          <li>
             <ol>台北分店：台北市中正區忠孝西路一段50-1號</ol>
             <ol>(Z區地下街No. 6-3A, Z3出口旁</ol>
             <ol>電話：(02)2331-3017 營業時間：12:00-20:00</ol>
@@ -127,15 +137,15 @@ const FooterIntroduceElement = styled.div`
       &_block {
         min-width: 8px;
         background-color: #986795;
-        @media(min-width:599px){
+        @media (min-width: 599px) {
           min-width: 15px;
         }
       }
     }
   }
 
-  .content{
-    &_font{
+  .content {
+    &_font {
       font-size: ${({ isMobile }) => (isMobile ? "0.8rem" : "1.6rem")};
     }
   }

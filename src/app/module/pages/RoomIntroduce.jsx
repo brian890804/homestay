@@ -64,8 +64,9 @@ let HouseImgItems = [
   {
     img: Room8,
     description:
-      "位於1樓入口處，客房裝潢以摩登時尚為基調，10平米大空間，溫馨舒適。(可加床>1人)",
+      "位於1樓入口處，客房裝潢以摩登時尚為基調，10坪米大空間，溫馨舒適。(可加床>1人)",
     name: "溫馨時光雙人房-附露臺",
+    price_tip:"平日:$2000/假日:$2500",
     introduce: {
       imgItems: [Room8_1, Room8_2, Room8_3, Room8_4],
       title: "經典溫馨客房-大陽台",
@@ -73,7 +74,7 @@ let HouseImgItems = [
       text: (
         <li>
           <ol>加床說明:</ol>
-          <ol>此床型加床為沙發椅攤平,尺寸為 200cm* ??cm</ol>
+          <ol>此床型加床為沙發椅攤坪,尺寸為 200cm* ??cm</ol>
           <ol>加床費用為$500,此房最多加1人</ol>
         </li>
       ),
@@ -82,8 +83,9 @@ let HouseImgItems = [
   {
     img: Room1,
     description:
-      "位於2樓左手邊，客房裝潢以日式和風為基調，14.5平米超大空間，適合居家聊天歇憩。(可加床>4人)",
+      "位於2樓左手邊，客房裝潢以日式和風為基調，14.5坪米超大空間，適合居家聊天歇憩。(可加床>4人)",
     name: "日式典藏雙人房",
+    price_tip:"平日:$2800/假日:$3300",
     introduce: {
       imgItems: [
         Room1_1,
@@ -102,7 +104,7 @@ let HouseImgItems = [
       text: (
         <li>
           <ol>加床說明:</ol>
-          <ol>此床型加床為沙發椅攤平,尺寸為 200cm* ??cm</ol>
+          <ol>此床型加床為沙發椅攤坪,尺寸為 200cm* ??cm</ol>
           <ol>加床費用為$500,此房最多加4人</ol>
         </li>
       ),
@@ -111,8 +113,9 @@ let HouseImgItems = [
   {
     img: Room7,
     description:
-      "位於2樓右手邊，客房裝潢以異國流行為基調，9.5平米大空間，溫馨舒適。(可加床>1人)",
+      "位於2樓右手邊，客房裝潢以異國流行為基調，9.5坪米大空間，溫馨舒適。(可加床>1人)",
     name: "異國風情雙人房",
+    price_tip:"平日:$2000/假日:$2500",
     introduce: {
       imgItems: [Room7_1, Room7_2, Room7_3, Room7_4, Room7_5, Room7_6, Room7_7],
       title: "異國風情雙人房",
@@ -120,7 +123,7 @@ let HouseImgItems = [
       text: (
         <li>
           <ol>加床說明:</ol>
-          <ol>此床型加床為沙發椅攤平,尺寸為 200cm* ??cm</ol>
+          <ol>此床型加床為沙發椅攤坪,尺寸為 200cm* ??cm</ol>
           <ol>加床費用為$500,此房最多加1人</ol>
         </li>
       ),
@@ -129,8 +132,9 @@ let HouseImgItems = [
   {
     img: Room6,
     description:
-      "位於3樓，客房裝潢以舒適摩登為基調，9.5平米大空間，風景宜人舒適吊床。",
+      "位於3樓，客房裝潢以舒適摩登為基調，9.5坪米大空間，風景宜人舒適吊床。",
     name: "雅致舒適雙人房-附陽台",
+    price_tip:"平日:$2300/假日:$2800",
     introduce: {
       imgItems: [Room6_1, Room6_2, Room6_3, Room6_4, Room6_5, Room6_6],
       title: "雅致舒適雙人房-附陽台",
@@ -141,8 +145,9 @@ let HouseImgItems = [
   {
     img: Room2,
     description:
-      "位於3樓，客房裝潢以海洋空間為基調，13平米超大空間，躺在床上即可盡收一望無際海景。",
+      "位於3樓，客房裝潢以海洋空間為基調，13坪米超大空間，躺在床上即可盡收一望無際海景。",
     name: "異國風情雙人房-附陽台",
+    price_tip:"平日:$2800/假日:$3300",
     introduce: {
       imgItems: [Room2_1, Room2_2, Room2_3, Room2_4, Room2_5],
       title: "異國風情雙人房-附陽台",
@@ -154,6 +159,7 @@ let HouseImgItems = [
     img: Balcony,
     description: "位於4樓頂樓，可盡收一望無際夜景。",
     name: "頂樓公共空間星空露臺",
+    price_tip:"",
     introduce: {
       imgItems: [Balcony_1, Balcony_2, Balcony_3],
       title: "頂樓公共空間星空露臺",

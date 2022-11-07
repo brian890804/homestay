@@ -29,7 +29,7 @@ function Title() {
           style={{
             fontSize: "1em",
             color: "white",
-            padding: isMobile ?"0px 10px":"3px 20px",
+            padding: isMobile ?"1px 10px":"3px 20px",
           }}
         >
           十步路到老街
@@ -43,9 +43,9 @@ function Title() {
             fontSize: isMobile ? "0.6em" : "1em",
             lineHeight: isMobile ? 2.2 : 1.5,
             backgroundColor: "#fff",
+            padding: isMobile ?"1px 10px":"3px 20px",
           }}
         >
-          {" "}
           &nbsp; 鬧中取靜，隱身於老街巷內中!
         </Grid>
       </Grid>
@@ -67,11 +67,11 @@ function Title() {
   );
 }
 function Content() {
-  let Introduces = [Introduce1, Introduce2];
+  let Introduces = [ Introduce2,Introduce1];
   return (
-    <div className="row" style={{ width: "100%" }}>
+    <div className="row pb-1" style={{ width: "100%" }}>
       {Introduces.map((data, index) => (
-        <div className="col-6 p-2" key={index}>
+        <div className="col-6 " key={index}>
           <img
             src={data}
             alt={`Introduce${index}`}

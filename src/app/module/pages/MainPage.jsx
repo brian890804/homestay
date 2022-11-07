@@ -8,7 +8,7 @@ export default function MainPage() {
       <Title />
       <NavigationBar />
       <SwiperIntroduction />
-      <div className="mx-3 mt-3">
+      <div className="mx-3 mt-3"style={{textAlign:'-webkit-center'}}>
         <Introduce />
       </div>
     </div>

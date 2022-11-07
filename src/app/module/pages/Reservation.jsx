@@ -51,7 +51,7 @@ export default function Reservation() {
             justifyContent="space-around"
             className="px-3 pt-3 fw-bold"
           >
-            <Grid item sm={6} xs={6} className=" title">
+            <Grid item sm={6} xs={6} className="title">
               【住房時間】
             </Grid>
             <Grid item sm={6} xs={6} className="text-end">

@@ -25,6 +25,9 @@ function MuiCard({ item }) {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+  const closeShow = useCallback(() => {
+    set(false);
+  });
   return (
     <MuiCardElement show={show}>
       <div className="text-start fw-bold ">
@@ -45,7 +48,6 @@ function MuiCard({ item }) {
       </div>
       <CardContent className="p-1">
         <Typography
-          gutterBottom
           variant="h5"
           component="div"
           className="text-start fw-bold title"
@@ -57,11 +59,22 @@ function MuiCard({ item }) {
           color="text.secondary"
           className="fw-bolder description "
         >
+          {item.price_tip}
+        </Typography>
+        <Typography
+          variant="body1"
+          color="text.secondary"
+          className="fw-bolder description "
+        >
           {item.description}
         </Typography>
       </CardContent>
       {show && (
-        <FloatIntroduce introduce={item?.introduce} handleClick={handleClick} />
+        <FloatIntroduce
+          introduce={item?.introduce}
+          handleClick={handleClick}
+          closeShow={closeShow}
+        />
       )}
     </MuiCardElement>
   );
@@ -76,6 +89,7 @@ const MuiCardElement = styled.div`/*  */
   :hover{
     transform:${({ show }) => !show && "scale(1.03)"};
     background-image:linear-gradient(to right, #ad5389, #4f2764);
+    height:100%;
     color:${({ show }) => !show && "#fff"};
     opacity:${({ show }) => !show && "0.9"};
   }
@@ -92,16 +106,12 @@ const MuiCardElement = styled.div`/*  */
       max-width:60px;
     }
   }
-.title{
-  font-size:0.8rem;
-  white-space:nowrap;
-}
   @media (max-width:599px){
    .title{
-     font-size:1rem;
+     font-size:0.8rem;
     }
     .description{
-        font-size:0.8rem;
+        font-size:0.6rem;
     }
 }
 `;
