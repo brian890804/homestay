@@ -1,4 +1,3 @@
-import MoveTop from "../../../_basic/pages/block/MoveTop";
 import {useState} from 'react';
 import MainPage from "./MainPage";
 import LegalHomeStay from "./LegalHomeStay";
@@ -8,7 +7,6 @@ import Traffic from "./Traffic";
 import EffectBox from "../../../_basic/pages/block/EffectBox";
 import ContactUs from "./ContactUs";
 import FooterIntroduce from "./FooterIntroduce";
-import ReservationBox from "../../../_basic/pages/block/ReservationBox";
 import { Backdrop } from "@mui/material";
 export default function Routes({ show }) {
 const [bgOpen,setBgOpen]=useState(false);
