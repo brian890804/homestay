@@ -11,7 +11,10 @@ const actions = [
   {
     icon: <ArrowUpwardIcon />,
     name: "回頂部",
-    onClick: () => window.scrollTo({ top: 0, behavior: "smooth" }),
+    onClick: () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setOpen(false);
+    },
   },
   {
     icon: <CalendarTodayIcon />,

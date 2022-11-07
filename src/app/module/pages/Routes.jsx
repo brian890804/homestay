@@ -13,7 +13,7 @@ const [bgOpen,setBgOpen]=useState(false);
   return (
     <>
       <EffectBox show={show} setBgOpen={setBgOpen}/>
-      <Backdrop open={bgOpen} sx={{zIndex:100}} />
+      <Backdrop open={bgOpen&&show} sx={{zIndex:100}} />
       <MainPage />
       <LegalHomeStay />
       <RoomIntroduce />
