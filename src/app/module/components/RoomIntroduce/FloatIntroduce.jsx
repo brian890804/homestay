@@ -92,8 +92,11 @@ const FloatIntroduceElement = styled.div`
   }
 
   .wiper {
+    max-height:50vh;
     height: auto;
-  
+    &:last-child {
+      animation: move 2s 1s;
+    }
     @keyframes move {
       0% {
         transform: translate(0, 0);
@@ -108,8 +111,9 @@ const FloatIntroduceElement = styled.div`
         transform: translate(-60px, 0);
       }
     }
-    animation: move 2s 1s;
+   
     @media (min-width: 599px) {
+      width:auto;
       min-height: 50vh;
       max-width: 45vw;
     }
