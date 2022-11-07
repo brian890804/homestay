@@ -72,7 +72,7 @@ export default function FooterIntroduce() {
         </Grid>
       </Grid>
       <Grid
-        className="fw-bold p-0 mb-2 "
+        className="fw-bold p-0 mb-2 content_font "
         container
         direction="row"
         justifyContent="start"
@@ -120,14 +120,23 @@ const FooterIntroduceElement = styled.div`
 
   .title {
     &_font {
-      font-size: ${({ isMobile }) => (isMobile ? "0.5rem" : "2rem")};
+      font-size: ${({ isMobile }) => (isMobile ? "1rem" : "2rem")};
       color: #986795;
     }
     &_purple {
       &_block {
-        min-width: 15px;
+        min-width: 8px;
         background-color: #986795;
+        @media(min-width:599px){
+          min-width: 15px;
+        }
       }
+    }
+  }
+
+  .content{
+    &_font{
+      font-size: ${({ isMobile }) => (isMobile ? "0.8rem" : "1.6rem")};
     }
   }
 `;

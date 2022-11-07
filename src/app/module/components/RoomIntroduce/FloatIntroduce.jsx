@@ -24,21 +24,25 @@ export default function FloatIntroduce({ introduce, handleClick }) {
           className="mySwiper wiper mb-3"
         >
           {imgItems.map((img, index) => (
-            <SwiperSlide className="wiper" key={index}>
-              <img src={img} alt={`${index} img`} />
+            <SwiperSlide key={index}>
+              <img src={img} alt={`${index} img`} className="wiper" />
             </SwiperSlide>
           ))}
         </Swiper>
         <div className="float_container_content">
           <div className="float_container_title">{title}</div>
-          <div className="float_container_option">
-            <Grid container direction="row" alignItems="center" spacing={2}>
+          <div className="float_container_option ">
+            <Grid container direction="row" alignItems="center" spacing={1}>
               {option.map((data) => {
                 const { text, icon } = options[data];
                 return (
                   <Grid item key={text}>
-                    <img src={icon} alt={text} />
-                    <label>{text}</label>
+                    <img
+                      src={icon}
+                      alt={text}
+                      className="float_container_icon"
+                    />
+                    <label className="float_container_icon_text">{text}</label>
                   </Grid>
                 );
               })}
@@ -84,11 +88,12 @@ const FloatIntroduceElement = styled.div`
 
   ol {
     padding: 0;
+    margin-bottom:0;
   }
 
   .wiper {
     height: auto;
-    min-height: 50vh;
+  
     @keyframes move {
       0% {
         transform: translate(0, 0);
@@ -105,7 +110,8 @@ const FloatIntroduceElement = styled.div`
     }
     animation: move 2s 1s;
     @media (min-width: 599px) {
-      max-width: 40vw;
+      min-height: 50vh;
+      max-width: 45vw;
     }
   }
   .divider {
@@ -113,7 +119,7 @@ const FloatIntroduceElement = styled.div`
     height: 2px;
     width: 100%;
     @media (min-width: 599px) {
-      width: 40vw;
+      width: 45vw;
     }
   }
   .float {
@@ -124,18 +130,32 @@ const FloatIntroduceElement = styled.div`
       justify-content: center;
       height: 100%;
 
+      &_icon {
+        width: 20px;
+        @media (min-width: 599px) {
+          width: 35px;
+        }
+        &_text {
+          font-size: 0.8rem;
+          @media (min-width: 599px) {
+            font-size: 1.2rem;
+          }
+        }
+      }
+
       &_content {
         display: flex;
         flex-flow: column;
         justify-content: center;
         width: 100%;
         @media (min-width: 599px) {
-          width: auto;
+          max-width: 45vw;
         }
       }
 
       &_title {
         font-size: 1.4rem;
+        font-weight:600;
         @media (min-width: 599px) {
           font-size: 1.5rem;
         }
