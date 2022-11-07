@@ -43,7 +43,7 @@ function MuiCard({ item }) {
           alt={`img ${item.name}`}
         />
       </div>
-      <CardContent>
+      <CardContent className="p-1">
         <Typography
           gutterBottom
           variant="h5"
@@ -55,7 +55,7 @@ function MuiCard({ item }) {
         <Typography
           variant="body1"
           color="text.secondary"
-          className="fw-bolder description"
+          className="fw-bolder description "
         >
           {item.description}
         </Typography>
@@ -92,7 +92,10 @@ const MuiCardElement = styled.div`/*  */
       max-width:60px;
     }
   }
-
+.title{
+  font-size:0.8rem;
+  white-space:nowrap;
+}
   @media (max-width:599px){
    .title{
      font-size:1rem;
