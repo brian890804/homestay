@@ -1,15 +1,21 @@
 import MoveTop from "../../../_basic/pages/block/MoveTop";
+import {useState} from 'react';
 import MainPage from "./MainPage";
 import LegalHomeStay from "./LegalHomeStay";
 import RoomIntroduce from "./RoomIntroduce";
 import Reservation from "./Reservation";
 import Traffic from "./Traffic";
+import EffectBox from "../../../_basic/pages/block/EffectBox";
 import ContactUs from "./ContactUs";
 import FooterIntroduce from "./FooterIntroduce";
+import ReservationBox from "../../../_basic/pages/block/ReservationBox";
+import { Backdrop } from "@mui/material";
 export default function Routes({ show }) {
+const [bgOpen,setBgOpen]=useState(false);
   return (
     <>
-      <MoveTop show={show} />
+      <EffectBox show={show} setBgOpen={setBgOpen}/>
+      <Backdrop open={bgOpen} sx={{zIndex:100}} />
       <MainPage />
       <LegalHomeStay />
       <RoomIntroduce />

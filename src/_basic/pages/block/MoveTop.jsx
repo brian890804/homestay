@@ -1,8 +1,6 @@
-import { useSwiper } from "swiper/react";
 import IconButton from '@mui/material/IconButton';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 export default function MoveTop({ show }) {
-    const swiper = useSwiper()
     return (
         <IconButton
             className='g-bc'
