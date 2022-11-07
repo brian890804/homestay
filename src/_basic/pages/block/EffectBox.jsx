@@ -43,7 +43,7 @@ export default function EffectBox({ setBgOpen, show }) {
           display: show ? "" : "none",
           cursor: "pointer",
           color: "white",
-          zIndex: 999,
+          zIndex: 110,
         }}
       >
         <SpeedDial
