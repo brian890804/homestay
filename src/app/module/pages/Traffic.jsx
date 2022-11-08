@@ -118,7 +118,7 @@ export default function Traffic() {
         </div>
       </div>
       <div className="bottomArea">
-        <div style={{ height: "30vh", position: "relative" }}>
+        <div style={{ height: "50vh", position: "relative" }}>
           <GoogleMapReact
             yesIWantToUseGoogleMapApiInternals
             bootstrapURLKeys={{ key: import.meta.env.VITE_GOOGLEMAP_KEY }}

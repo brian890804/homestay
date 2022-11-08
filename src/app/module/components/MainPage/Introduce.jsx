@@ -15,7 +15,7 @@ function Title() {
   return (
     <div className={`fs-${isMobile ? 6 : 2} mt-5 mx-${isMobile ? 3 : 3} `}>
       <Grid
-        className="text-start fw-bold p-0 mb-2 g-bc"
+        className="text-start fw-bold  mb-2 g-bc"
         container
         direction="row"
         justifyContent="center"
@@ -32,6 +32,7 @@ function Title() {
             fontSize: "1em",
             color: "white",
             padding: isMobile ? "1px 10px" : "3px 20px",
+            maxWidth:'40%'
           }}
         >
           十步路到老街

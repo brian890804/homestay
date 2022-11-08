@@ -144,7 +144,7 @@ function TipBox() {
         bottom: isMobile ? "5%" : "15%",
         right: "5%",
         color: "white",
-        minWidth: "200px",
+        minWidth: "150px",
       }}
     >
       <div className={styles.main}>
