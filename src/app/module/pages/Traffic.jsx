@@ -100,8 +100,8 @@ const PositionTipElement = styled.div`
 export default function Traffic() {
   const defaultProps = {
     center: {
-      lat: 25.1087319,
-      lng: 121.8451387,
+      lat: 25.1088259,
+      lng: 121.8454517,
     },
     zoom: 19.52,
   };
@@ -118,7 +118,7 @@ export default function Traffic() {
         </div>
       </div>
       <div className="bottomArea">
-        <div style={{ height: "50vh", position: "relative" }}>
+        <div style={{ height: "30vh", position: "relative" }}>
           <GoogleMapReact
             yesIWantToUseGoogleMapApiInternals
             bootstrapURLKeys={{ key: import.meta.env.VITE_GOOGLEMAP_KEY }}
