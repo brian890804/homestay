@@ -11,35 +11,6 @@ import Title from "../../../_basic/pages/toolbar/Title";
 import Pic from "../../../assets/Reservation/Pic1.png";
 import Divider from "@mui/material/Divider";
 export default function Reservation() {
-  let Icons = [
-    {
-      name: "cellphone",
-      source: PhoneIcon,
-      url: "tel:+886-9-86310045",
-    },
-    {
-      name: "letter",
-      source: LetterIcon,
-      url: "https://liff.line.me/1645278921-kWRPP32q/?accountId=958fdsep",
-    },
-    { name: "share", source: ShareIcon },
-  ];
-  const onClick = useCallback(async (data) => {
-    const { name, url } = data;
-    if (name === "cellphone") {
-      window.location.href = url;
-    } else if (name === "letter") {
-      window.open(url);
-    } else {
-      if (navigator.share) {
-        await navigator.share({
-          title: "九份生活民宿空間",
-          text: "九份最舒適的民宿",
-          url: window.location.href,
-        });
-      }
-    }
-  });
   return (
     <ReservationElement>
       <Title id="reservation">訂房說明</Title>
@@ -54,17 +25,7 @@ export default function Reservation() {
             <Grid item sm={6} xs={6} className="title">
               【住房時間】
             </Grid>
-            <Grid item sm={6} xs={6} className="text-end">
-              {Icons.map((data, index) => (
-                <IconButton
-                  key={index}
-                  className="icon_button"
-                  onClick={() => onClick(data)}
-                >
-                  <data.source />
-                </IconButton>
-              ))}
-            </Grid>
+            <Grid item sm={6} xs={6}/>
             <Grid item sm={12} xs={12} className="px-2">
               進房Check in時間為下午03:00-23:30。
             </Grid>

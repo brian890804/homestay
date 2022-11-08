@@ -6,22 +6,11 @@ import SpeedDialAction from "@mui/material/SpeedDialAction";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import BuildIcon from "@mui/icons-material/Build";
-
-const actions = [
-  {
-    icon: <ArrowUpwardIcon />,
-    name: "回頂部",
-    onClick: () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      setOpen(false);
-    },
-  },
-  {
-    icon: <CalendarTodayIcon />,
-    name: "前往訂房",
-    onClick: () => window.open(import.meta.env.VITE_BOOKING_URL),
-  },
-];
+import ShareIcon from "@mui/icons-material/Share";
+import LetterIcon from "@mui/icons-material/Email";
+import PhoneIcon from "@mui/icons-material/LocalPhone";
+import LineIcon from '../../../assets/Logo/Line.png';
+import { useCallback } from "react";
 
 export default function EffectBox({ setBgOpen, show }) {
   const [open, setOpen] = React.useState(false);
@@ -33,6 +22,52 @@ export default function EffectBox({ setBgOpen, show }) {
     setOpen(false);
     setBgOpen(false);
   };
+
+  const onScroll = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setOpen(false);
+  });
+  const onReservation = useCallback(() => {
+    window.open(import.meta.env.VITE_BOOKING_URL);
+  });
+  const onShare = useCallback(async () => {
+    if (navigator.share) {
+      await navigator.share({
+        title: "九份生活民宿空間",
+        text: "九份最舒適的民宿",
+        url: window.location.href,
+      });
+    }
+  });
+  const onContactUs = useCallback(() => {
+    window.location.href = "tel:+886-9-86310045";
+  });
+  const onOpenLine = useCallback(() => {
+    window.open("https://liff.line.me/1645278921-kWRPP32q/?accountId=958fdsep");
+  });
+  const actions = [
+    {
+      icon: <ArrowUpwardIcon />,
+      name: "回頂部",
+      onClick: onScroll,
+    },
+    {
+      icon: <CalendarTodayIcon />,
+      name: "前往訂房",
+      onClick: onReservation,
+    },
+    {
+      icon: <ShareIcon />,
+      name: "分享",
+      onClick: onShare,
+    },
+    {
+      icon: <PhoneIcon />,
+      name: "聯絡我們",
+      onClick: onContactUs,
+    },
+    { icon: <img src={LineIcon}alt="Line Icon"/>, name: "Line", onClick: onOpenLine },
+  ];
   return (
     <EffectBoxElement>
       <Box
@@ -81,4 +116,7 @@ export default function EffectBox({ setBgOpen, show }) {
 }
 const EffectBoxElement = styled.div`
   /*  */
+  img{
+    width:25px;
+  }
 `;

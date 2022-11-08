@@ -53,7 +53,7 @@ function TipContent() {
   }
   return (
     <TipContentElement className="fw-bold g-ts-w " isMobile={isMobile}>
-      <div className="top">THE LIFE SPACE</div>
+      <div className="top white-space-nowrap">THE LIFE SPACE</div>
       <div className="g-bc cursor introduce_container" onClick={onClick}>
         <img src={Calendar} alt="日曆" /> 查詢空房
       </div>
@@ -88,7 +88,7 @@ const TipContentElement = styled.div`
     }
   }
   animation: 2.5s recharge-move infinite;
-  animation-delay:3s;
+  animation-delay: 3s;
 
   .top {
     margin-top: 5%;
@@ -144,14 +144,13 @@ function TipBox() {
         bottom: isMobile ? "5%" : "15%",
         right: "5%",
         color: "white",
+        minWidth: "200px",
       }}
     >
       <div className={styles.main}>
         {transitions(({ innerHeight, ...rest }, item) => (
           <animated.div className={styles.transitionsItem} style={rest}>
-            <animated.div style={{ overflow: "hidden", height: innerHeight }}>
-              {item}
-            </animated.div>
+            <animated.div style={{ height: innerHeight }}>{item}</animated.div>
           </animated.div>
         ))}
       </div>

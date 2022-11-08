@@ -100,10 +100,10 @@ const PositionTipElement = styled.div`
 export default function Traffic() {
   const defaultProps = {
     center: {
-      lat: 25.1086269,
-      lng: 121.8454328,
+      lat: 25.1087319,
+      lng: 121.8451387,
     },
-    zoom: 17,
+    zoom: 19.52,
   };
   const [show, setShow] = useState(false);
   return (
@@ -126,8 +126,8 @@ export default function Traffic() {
             defaultZoom={defaultProps.zoom}
           >
             <LandMark
-              lat={25.108}
-              lng={121.8432}
+              lat={25.1088259}
+              lng={121.8454517}
               text="My Marker"
               setShow={setShow}
             />

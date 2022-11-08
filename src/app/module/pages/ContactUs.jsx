@@ -45,6 +45,5 @@ const ContactUsElement = styled.div`
   }
   li {
     font-size: 0.9rem;
-    line-height: ${({ isMobile }) => (isMobile ? 2 : 2.5)};
   }
 `;

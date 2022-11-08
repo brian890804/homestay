@@ -21,15 +21,17 @@ function Title() {
         justifyContent="center"
         alignItems="center"
         spacing={2}
+        sx={{ whiteSpace: "nowrap" }}
       >
         <Grid
           item
           sm={3}
+          xs={3}
           className="g-ts-w"
           style={{
             fontSize: "1em",
             color: "white",
-            padding: isMobile ?"1px 10px":"3px 20px",
+            padding: isMobile ? "1px 10px" : "3px 20px",
           }}
         >
           十步路到老街
@@ -43,7 +45,7 @@ function Title() {
             fontSize: isMobile ? "0.6em" : "1em",
             lineHeight: isMobile ? 2.2 : 1.5,
             backgroundColor: "#fff",
-            padding: isMobile ?"1px 10px":"3px 20px",
+            padding: isMobile ? "1px 10px" : "3px 20px",
           }}
         >
           &nbsp; 鬧中取靜，隱身於老街巷內中!
@@ -67,7 +69,7 @@ function Title() {
   );
 }
 function Content() {
-  let Introduces = [ Introduce2,Introduce1];
+  let Introduces = [Introduce2, Introduce1];
   return (
     <div className="row pb-1" style={{ width: "100%" }}>
       {Introduces.map((data, index) => (
