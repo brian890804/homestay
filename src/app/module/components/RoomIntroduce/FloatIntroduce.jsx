@@ -19,6 +19,7 @@ export default function FloatIntroduce({ introduce, handleClick, closeShow }) {
       <div className="cover" onClick={closeShow}></div>
       <div className="float_container">
         <Swiper
+          lazy
           scrollbar={{
             hide: true,
           }}
