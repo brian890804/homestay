@@ -21,6 +21,7 @@ export default function SwiperIntroduction() {
   return (
     <>
       <Swiper
+        lazy
         className="mySwiper"
         modules={[Pagination]}
         autoplay={{ delay: 5000 }}
@@ -34,6 +35,7 @@ export default function SwiperIntroduction() {
             <img
               alt=""
               src={data}
+              loading={"lazy"}
               style={{
                 width: "100%",
                 maxHeight: "400px",

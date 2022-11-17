@@ -38,6 +38,7 @@ export default function LegalHomeStay() {
             {RoomItems.map((item, index) => (
               <div className="col-4 p-1" key={index}>
                 <img
+                  loading={"lazy"}
                   src={item}
                   alt={`Room${index}`}
                   className="body_introduce_img_item"

@@ -52,7 +52,7 @@ export default function FooterIntroduce() {
         spacing={1}
       >
         <Grid item xs={7} sm={7}>
-          <img src={shop1} data-src={shop1} ref={imgRef} alt="九份李儀餅店" />
+          <img src={shop1} loading={"lazy"} ref={imgRef} alt="九份李儀餅店" />
         </Grid>
         <Grid item xs={5} sm={5}>
           <img

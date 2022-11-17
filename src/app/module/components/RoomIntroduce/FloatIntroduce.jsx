@@ -29,7 +29,7 @@ export default function FloatIntroduce({ introduce, handleClick, closeShow }) {
         >
           {imgItems.map((img, index) => (
             <SwiperSlide key={index}>
-              <img src={img} alt={`${index} img`} className="wiper" />
+              <img src={img} alt={`${index} img`} className="wiper"loading="lazy" />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -45,6 +45,7 @@ export default function FloatIntroduce({ introduce, handleClick, closeShow }) {
                       src={icon}
                       alt={text}
                       className="float_container_icon"
+                      loading={"lazy"}
                     />
                     <label className="float_container_icon_text">{text}</label>
                   </Grid>
