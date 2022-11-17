@@ -41,9 +41,10 @@ const ContactUsElement = styled.div`
   /*  */
   ol {
     list-style: none;
-    margin-top: 2%;
+    font-size: 1.2rem;
   }
   li {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    padding-bottom:0.2em;
   }
 `;

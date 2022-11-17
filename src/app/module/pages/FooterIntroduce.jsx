@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Grid from "@mui/material/Grid";
 import styled from "@emotion/styled";
 import useResize from "../Event/Resize";
@@ -9,6 +9,7 @@ export default function FooterIntroduce() {
   const { isMobile } = useResize();
   const [fixHeight, setFixHeight] = useState(null);
   console.log(fixHeight, "fixHeight");
+  const imgRef = useRef();
   return (
     <FooterIntroduceElement isMobile={isMobile}>
       <Grid
@@ -51,15 +52,15 @@ export default function FooterIntroduce() {
         spacing={1}
       >
         <Grid item xs={7} sm={7}>
-          <img src={shop1} data-src={shop1} alt="九份李儀餅店" />
+          <img src={shop1} data-src={shop1} ref={imgRef} alt="九份李儀餅店" />
         </Grid>
         <Grid item xs={5} sm={5}>
           <img
             src={shop2}
             alt="李儀餅店"
+            height={imgRef.current?.clientHeight}
             style={{
-              backgroundSize:'contain',
-
+              backgroundSize: "contain",
             }}
           />
         </Grid>
@@ -86,23 +87,47 @@ export default function FooterIntroduce() {
         container
         direction="row"
         justifyContent="start"
-        alignItems=""
         spacing={1}
       >
         <Grid item sm={7} xs={7}>
-          <li>
-            <ol>九份總店：台北縣瑞芳鎮九份汽車路18號(7-11的對面)</ol>
-            <ol>訂貨專線：(02)2496-5628 手機：0955798018</ol>
-            <ol>傳真：(02)2406-3045 E-mail:lw3in@seed.net.tw</ol>
-            <ol>營業時間：9:00-17:00</ol>
-          </li>
+          <Grid
+            className="fw-bold p-0 mb-2 "
+            container
+            direction="row"
+            justifyContent="start"
+            spacing={1}
+          >
+            <Grid item xs={12}>
+              九份總店：台北縣瑞芳鎮九份汽車路18號(7-11的對面)
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              訂貨專線：(02)2496-5628
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              手機：0955798018
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              傳真：(02)2406-3045
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              E-mail:lw3in@seed.net.tw
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              營業時間：9:00-17:00
+            </Grid>
+          </Grid>
         </Grid>
         <Grid item sm={5} xs={5}>
-          <li>
-            <ol>台北分店：台北市中正區忠孝西路一段50-1號</ol>
-            <ol>(Z區地下街No. 6-3A, Z3出口旁</ol>
-            <ol>電話：(02)2331-3017 營業時間：12:00-20:00</ol>
-          </li>
+          <Grid item xs={12}>
+            台北分店：台北市中正區忠孝西路一段50-1號 (Z區地下街No.
+            6-3A,Z3出口旁)
+          </Grid>
+          <Grid item xs={12}>
+            電話：(02)2331-3017
+          </Grid>
+          <Grid item xs={12}>
+            營業時間：12:00-20:00
+          </Grid>
         </Grid>
       </Grid>
     </FooterIntroduceElement>
@@ -113,16 +138,6 @@ const FooterIntroduceElement = styled.div`
   /*  */
   padding: 4% 5%;
   background-color: #fff8bd;
-
-  li {
-    list-style: none;
-    margin-top: 2%;
-  }
-
-  ol {
-    padding: 0;
-    font-size: ${({ isMobile }) => (isMobile ? "0.5rem" : "1.2rem")};
-  }
 
   img {
     width: 100%;
@@ -146,7 +161,7 @@ const FooterIntroduceElement = styled.div`
 
   .content {
     &_font {
-      font-size: ${({ isMobile }) => (isMobile ? "0.8rem" : "1.6rem")};
+      font-size: ${({ isMobile }) => (isMobile ? "0.6rem" : "1.2rem")};
     }
   }
 `;

@@ -10,9 +10,11 @@ import ShareIcon from "@mui/icons-material/Share";
 import Title from "../../../_basic/pages/toolbar/Title";
 import Pic from "../../../assets/Reservation/Pic1.png";
 import Divider from "@mui/material/Divider";
+import useResize from "../Event/Resize";
 export default function Reservation() {
+  const { isMobile } = useResize();
   return (
-    <ReservationElement>
+    <ReservationElement isMobile={isMobile}>
       <Title id="reservation">訂房說明</Title>
       <Grid container direction="row" justifyContent="center" spacing={2}>
         <Grid item sm={6} xs={12}>
@@ -21,19 +23,20 @@ export default function Reservation() {
             direction="row"
             justifyContent="space-around"
             className="px-3 pt-3 fw-bold"
+            sx={{ fontSize: "1.2rem" }}
           >
             <Grid item sm={6} xs={6} className="title">
               【住房時間】
             </Grid>
-            <Grid item sm={6} xs={6}/>
-            <Grid item sm={12} xs={12} className="px-2">
+            <Grid item sm={6} xs={6} />
+            <Grid item sm={12} xs={12} className="px-2 content">
               進房Check in時間為下午03:00-23:30。
             </Grid>
-            <Grid item sm={12} xs={12} className="px-2">
+            <Grid item sm={12} xs={12} className="px-2 content">
               退房Check
               out時間為隔日中午12：00前退房，逾期將視情況收取費用（超過30分鐘加收$500)
             </Grid>
-            <Grid item sm={12} xs={12} className="pt-3 pl-2 fw-bold">
+            <Grid item sm={12} xs={12} className="pt-3 pl-2 fw-bold content">
               <Divider />
             </Grid>
           </Grid>
@@ -44,15 +47,11 @@ export default function Reservation() {
             justifyContent="space-around"
             className="px-3 pt-3 fw-bold"
           >
-            <Grid item sm={12} xs={12} className=" title">
+            <Grid item sm={12} xs={12} className="title">
               【住房通知】
             </Grid>
-            <Grid item sm={12} xs={12} className=" title">
-              <ol
-                style={{ listStyle: "none", fontSize: "16px" }}
-                className="pl-1 "
-              >
-                <li></li>
+            <Grid item sm={12} xs={12} className="title">
+              <ol className="pl-1 ">
                 <li>
                   📍透過官網訂房，官網顯示最終價格，不會另加收服務費、稅金
                 </li>
@@ -74,21 +73,14 @@ export default function Reservation() {
                   退訂金的20% 當日取消訂房: 0% (不予退還訂金
                 </li>
                 <li>
-                  {" "}
                   📣若有其他問題可以撥打此電話聯繫我們：0986310045
                   LINE官方帳號ID:@958fdsep
                 </li>
               </ol>
             </Grid>
-            <Grid item sm={12} xs={12} className="px-2">
-              進房Check in時間為下午03:00-23:30。
-            </Grid>
-            <Grid item sm={12} xs={12} className="px-2">
-              退房Check
-              out時間為隔日中午12：00前退房，逾期將視情況收取費用（超過30分鐘加收$500)
-            </Grid>
+
             <Grid item sm={12} xs={12} className="py-3 pl-2 fw-bold">
-              <Divider />
+              {/* <Divider /> */}
             </Grid>
           </Grid>
         </Grid>
@@ -106,7 +98,7 @@ const ReservationElement = styled.div`
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-    font-size: 22px;
+    font-size: ${({ isMobile }) => (isMobile ? "1.2rem" : "1.6rem")};
   }
   .icon_button {
     border-style: double;
@@ -118,11 +110,17 @@ const ReservationElement = styled.div`
   .img {
     width: 100%;
     padding-bottom: 5%;
-    @media (max-width: 599px) {
-      height: 350px;
-    }
+    height: 100%;
   }
   .MuiSvgIcon-root {
     width: 15px;
+  }
+  .content,
+  ol {
+    list-style: none;
+    font-size: ${({ isMobile }) => (isMobile ? "0.8rem" : "1.2rem")};
+  }
+  li {
+    margin-bottom: 1px;
   }
 `;
