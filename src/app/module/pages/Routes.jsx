@@ -1,19 +1,20 @@
-import {useState} from 'react';
+import { useState, lazy } from "react";
 import MainPage from "./MainPage";
-import LegalHomeStay from "./LegalHomeStay";
-import RoomIntroduce from "./RoomIntroduce";
-import Reservation from "./Reservation";
-import Traffic from "./Traffic";
 import EffectBox from "../../../_basic/pages/block/EffectBox";
-import ContactUs from "./ContactUs";
-import FooterIntroduce from "./FooterIntroduce";
+
 import { Backdrop } from "@mui/material";
+const LegalHomeStay = lazy(() => import("./LegalHomeStay"));
+const RoomIntroduce = lazy(() => import("./RoomIntroduce"));
+const Reservation = lazy(() => import("./Reservation"));
+const Traffic = lazy(() => import("./Traffic"));
+const ContactUs = lazy(() => import("./ContactUs"));
+const FooterIntroduce = lazy(() => import("./FooterIntroduce"));
 export default function Routes({ show }) {
-const [bgOpen,setBgOpen]=useState(false);
+  const [bgOpen, setBgOpen] = useState(false);
   return (
     <>
-      <EffectBox show={show} setBgOpen={setBgOpen}/>
-      <Backdrop open={bgOpen&&show} sx={{zIndex:100}} />
+      <EffectBox show={show} setBgOpen={setBgOpen} />
+      <Backdrop open={bgOpen && show} sx={{ zIndex: 100 }} />
       <MainPage />
       <LegalHomeStay />
       <RoomIntroduce />
