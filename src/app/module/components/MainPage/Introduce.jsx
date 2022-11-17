@@ -88,10 +88,5 @@ const ContentElement = styled.div`
   img {
     width: 100%;
     height: 100%;
-    &:hover {
-      @media (max-width: 599px) {
-        transform: scale(1.5);
-      }
-    }
   }
 `;
