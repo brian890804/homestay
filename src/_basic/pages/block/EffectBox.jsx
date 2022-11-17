@@ -9,7 +9,7 @@ import BuildIcon from "@mui/icons-material/Build";
 import ShareIcon from "@mui/icons-material/Share";
 import LetterIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/LocalPhone";
-import LineIcon from '../../../assets/Logo/Line.png';
+import LineIcon from "../../../assets/Logo/Line.png";
 import { useCallback } from "react";
 
 export default function EffectBox({ setBgOpen, show }) {
@@ -26,6 +26,7 @@ export default function EffectBox({ setBgOpen, show }) {
   const onScroll = useCallback(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     setOpen(false);
+    setBgOpen(false);
   });
   const onReservation = useCallback(() => {
     window.open(import.meta.env.VITE_BOOKING_URL);
@@ -66,7 +67,11 @@ export default function EffectBox({ setBgOpen, show }) {
       name: "聯絡我們",
       onClick: onContactUs,
     },
-    { icon: <img src={LineIcon}alt="Line Icon"/>, name: "Line", onClick: onOpenLine },
+    {
+      icon: <img src={LineIcon} alt="Line Icon" />,
+      name: "Line",
+      onClick: onOpenLine,
+    },
   ];
   return (
     <EffectBoxElement>
@@ -116,7 +121,7 @@ export default function EffectBox({ setBgOpen, show }) {
 }
 const EffectBoxElement = styled.div`
   /*  */
-  img{
-    width:25px;
+  img {
+    width: 25px;
   }
 `;
