@@ -1,4 +1,5 @@
 import { Grid } from "@mui/material";
+import styled from "@emotion/styled";
 import useResize from "../../Event/Resize";
 import Introduce1 from "../../../../assets/Introduce/Introduce1.png";
 import Introduce2 from "../../../../assets/Introduce/Introduce2.png";
@@ -32,7 +33,7 @@ function Title() {
             fontSize: "1em",
             color: "white",
             padding: isMobile ? "1px 10px" : "3px 20px",
-            maxWidth:'40%'
+            maxWidth: "40%",
           }}
         >
           十步路到老街
@@ -72,16 +73,25 @@ function Title() {
 function Content() {
   let Introduces = [Introduce2, Introduce1];
   return (
-    <div className="row pb-1" style={{ width: "100%" }}>
+    <ContentElement className="row pb-1">
       {Introduces.map((data, index) => (
         <div className="col-6 " key={index}>
-          <img
-            src={data}
-            alt={`Introduce${index}`}
-            style={{ width: "100%", height: "100%" }}
-          />
+          <img src={data} alt={`Introduce${index}`} />
         </div>
       ))}
-    </div>
+    </ContentElement>
   );
 }
+const ContentElement = styled.div`
+  /*  */
+  width: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    &:hover {
+      @media (max-width: 599px) {
+        transform: scale(1.5);
+      }
+    }
+  }
+`;

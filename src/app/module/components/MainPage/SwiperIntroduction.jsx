@@ -140,7 +140,6 @@ function TipBox() {
         position: "absolute",
         textAlign: "center",
         zIndex: 1,
-        width: isMobile ? "35vw" : "13vw",
         bottom: isMobile ? "5%" : "15%",
         right: "5%",
         color: "white",

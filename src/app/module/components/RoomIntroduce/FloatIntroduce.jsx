@@ -104,7 +104,6 @@ const FloatIntroduceElement = styled.div`
   }
 
   .wiper {
-    max-height: 50vh;
     height: auto;
     &:last-child {
       animation: move 2s 1s;

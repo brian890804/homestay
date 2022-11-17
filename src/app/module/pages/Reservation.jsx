@@ -1,11 +1,5 @@
-import { useCallback } from "react";
 import { Grid } from "@mui/material";
-import IconButton from "@mui/material/IconButton";
 import styled from "@emotion/styled";
-
-import PhoneIcon from "@mui/icons-material/LocalPhone";
-import LetterIcon from "@mui/icons-material/Email";
-import ShareIcon from "@mui/icons-material/Share";
 
 import Title from "../../../_basic/pages/toolbar/Title";
 import Pic from "../../../assets/Reservation/Pic1.png";
