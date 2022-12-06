@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Grid from "@mui/material/Grid";
 import styled from "@emotion/styled";
 import useResize from "../Event/Resize";
@@ -8,8 +8,16 @@ import shop2 from "../../../assets/FooterIntroduce/shop-2.png";
 export default function FooterIntroduce() {
   const { isMobile } = useResize();
   const [fixHeight, setFixHeight] = useState(null);
-  console.log(fixHeight, "fixHeight");
   const imgRef = useRef();
+  useEffect(() => {
+    window.addEventListener("scroll", () =>
+      setFixHeight(imgRef.current.clientHeight)
+    );
+    return () =>
+      window.removeEventListener("scroll", () =>
+        setFixHeight(imgRef.current.clientHeight)
+      );
+  }, []);
   return (
     <FooterIntroduceElement isMobile={isMobile}>
       <Grid
@@ -58,7 +66,7 @@ export default function FooterIntroduce() {
           <img
             src={shop2}
             alt="李儀餅店"
-            height={imgRef.current?.clientHeight}
+            height={fixHeight}
             style={{
               backgroundSize: "contain",
             }}
