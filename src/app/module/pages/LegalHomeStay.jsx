@@ -32,22 +32,24 @@ export default function LegalHomeStay() {
           <div className="row">
             <div className="col-12 body_introduce_text">
               版權所有為生活空間民宿。電話：0986310045 地址：
-              新北市瑞芳區九份烏勢巷6號 {!isMobile&&<br/>}北縣 觀光局核准合法民宿編號120號
-              99年1月12日北府觀管字第0990879564號
+              新北市瑞芳區九份烏勢巷6號 {!isMobile && <br />}北縣
+              觀光局核准合法民宿編號120號 99年1月12日北府觀管字第0990879564號
             </div>
           </div>
-          <div className="row mt-2 ">
-            {RoomItems.map((item, index) => (
-              <div className="col-4 p-1" key={index}>
-                <img
-                  loading={"lazy"}
-                  src={item}
-                  alt={`Room${index}`}
-                  className="body_introduce_img_item"
-                />
-              </div>
-            ))}
-          </div>
+          {!isMobile && (
+            <div className="row mt-2 ">
+              {RoomItems.map((item, index) => (
+                <div className="col-4 p-1" key={index}>
+                  <img
+                    loading={"lazy"}
+                    src={item}
+                    alt={`Room${index}`}
+                    className="body_introduce_img_item"
+                  />
+                </div>
+              ))}
+            </div>
+          )}
         </div>
         <div className="col-12">
           <img src={view} className="body_introduce" alt="logo" />

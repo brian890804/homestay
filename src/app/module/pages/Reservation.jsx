@@ -79,9 +79,12 @@ export default function Reservation() {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item sm={6} xs={12}>
-          <img src={Pic} alt="訂房說明" className="img" />
-        </Grid>
+
+        {!isMobile && (
+          <Grid item sm={6} xs={12}>
+            <img src={Pic} alt="訂房說明" className="img" />{" "}
+          </Grid>
+        )}
       </Grid>
     </ReservationElement>
   );
