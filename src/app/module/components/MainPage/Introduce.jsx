@@ -47,7 +47,7 @@ function Title() {
             fontSize: isMobile ? "0.6em" : "1em",
             lineHeight: isMobile ? 2.2 : 1.5,
             backgroundColor: "#fff",
-            padding: isMobile ? "1px 10px" : "3px 20px",
+            padding: isMobile ? "1px 10px" : "3px 0px",
           }}
         >
           &nbsp; 鬧中取靜，隱身於老街巷內中!

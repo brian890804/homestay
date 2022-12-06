@@ -5,9 +5,11 @@ import view from "../../../assets/View/view.png";
 import Room2 from "../../../assets/Room/Room2.png";
 import Room6 from "../../../assets/Room/Room6.png";
 import Room7 from "../../../assets/Room/Room7.png";
+import useResize from "../Event/Resize";
 
 export default function LegalHomeStay() {
   const RoomItems = [Room2, Room7, Room6];
+  const { isMobile } = useResize();
   return (
     <SecondPageElement>
       <Title id="legalHomeStay">新北市合法民宿</Title>
@@ -30,7 +32,7 @@ export default function LegalHomeStay() {
           <div className="row">
             <div className="col-12 body_introduce_text">
               版權所有為生活空間民宿。電話：0986310045 地址：
-              新北市瑞芳區九份烏勢巷6號 北縣觀光局核准合法民宿編號120號
+              新北市瑞芳區九份烏勢巷6號 {!isMobile&&<br/>}北縣 觀光局核准合法民宿編號120號
               99年1月12日北府觀管字第0990879564號
             </div>
           </div>
