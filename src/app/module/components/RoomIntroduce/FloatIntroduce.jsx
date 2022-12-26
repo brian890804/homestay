@@ -29,7 +29,12 @@ export default function FloatIntroduce({ introduce, handleClick, closeShow }) {
         >
           {imgItems.map((img, index) => (
             <SwiperSlide key={index}>
-              <img src={img} alt={`${index} img`} className="wiper"loading="lazy" />
+              <img
+                src={img}
+                alt={`${index} img`}
+                className="wiper"
+                loading="lazy"
+              />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -37,7 +42,7 @@ export default function FloatIntroduce({ introduce, handleClick, closeShow }) {
           <div className="float_container_title">{title}</div>
           <div className="float_container_option ">
             <Grid container direction="row" alignItems="center" spacing={1}>
-              {option.map((data) => {
+              {option?.map((data) => {
                 const { text, icon } = options[data];
                 return (
                   <Grid item key={text}>
@@ -53,7 +58,7 @@ export default function FloatIntroduce({ introduce, handleClick, closeShow }) {
               })}
             </Grid>
           </div>
-          <div className="divider my-3"> &nbsp;</div>
+          {text && <div className="divider my-3"> &nbsp;</div>}
           <div className="float_container_text">{text}</div>
         </div>
       </div>

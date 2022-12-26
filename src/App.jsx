@@ -32,7 +32,7 @@ function App() {
               display: "flex",
               alignItems: "center",
               placeContent: "center",
-              backgroundColor: "RGB(255, 255, 255, 0.87);",
+              backgroundColor: "RGB(255, 255, 255, 0.87)",
             }}
           >
             <HashLoader color="#986795" size={50} />

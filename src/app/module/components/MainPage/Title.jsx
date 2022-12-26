@@ -17,7 +17,7 @@ export default function Title() {
     >
       <img
         src={Logo}
-        alt="logo"
+        alt="九份離老街最近的民宿"
         style={{
           maxWidth: TitleHeight - (isMobile ? 10 : 5),
           maxHeight: TitleHeight - (isMobile ? 10 : 5),

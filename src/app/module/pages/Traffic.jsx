@@ -111,10 +111,10 @@ export default function Traffic() {
       <Title id="traffic">交通導引</Title>
       <div className="topArea">
         <div className="mr-2">
-          <img src={map} alt="map" className="img" />
+          <img src={map} alt="九份生活空間民宿" className="img" />
         </div>
         <div className="ml-2">
-          <img src={position} alt="position" className="img" />
+          <img src={position} alt="GoogleMap 九份生活空間民宿" className="img" />
         </div>
       </div>
       <div className="bottomArea">

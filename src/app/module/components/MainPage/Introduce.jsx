@@ -76,7 +76,7 @@ function Content() {
     <ContentElement className="row pb-1">
       {Introduces.map((data, index) => (
         <div className="col-6 " key={index}>
-          <img src={data} alt={`Introduce${index}`}loading={"lazy"} />
+          <img src={data} alt={`九份民宿 房型${index}`}loading={"lazy"} />
         </div>
       ))}
     </ContentElement>

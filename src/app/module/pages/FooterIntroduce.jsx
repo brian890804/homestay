@@ -95,7 +95,7 @@ export default function FooterIntroduce() {
         container
         direction="row"
         justifyContent="start"
-        spacing={1}
+        spacing={0}
       >
         <Grid item sm={7} xs={7}>
           <Grid
@@ -130,10 +130,10 @@ export default function FooterIntroduce() {
             台北分店：台北市中正區忠孝西路一段50-1號 (Z區地下街No.
             6-3A,Z3出口旁)
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} sx={{ paddingTop: "1.5%" }}>
             電話：(02)2331-3017
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} sx={{ paddingTop: "1.5%" }}>
             營業時間：12:00-20:00
           </Grid>
         </Grid>

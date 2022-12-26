@@ -2,13 +2,13 @@ import Title from "../../../_basic/pages/toolbar/Title";
 import styled from "@emotion/styled";
 import license from "../../../assets/License/license.png";
 import view from "../../../assets/View/view.png";
-import Room2 from "../../../assets/Room/Room2.png";
-import Room6 from "../../../assets/Room/Room6.png";
-import Room7 from "../../../assets/Room/Room7.png";
+import View1 from "../../../assets/LegalHomeStay/1.png";
+import View2 from "../../../assets/LegalHomeStay/2.png";
+import View3 from "../../../assets/LegalHomeStay/3.png";
 import useResize from "../Event/Resize";
 
 export default function LegalHomeStay() {
-  const RoomItems = [Room2, Room7, Room6];
+  const RoomItems = [View1, View2, View3];
   const { isMobile } = useResize();
   return (
     <SecondPageElement>
@@ -43,7 +43,7 @@ export default function LegalHomeStay() {
                   <img
                     loading={"lazy"}
                     src={item}
-                    alt={`Room${index}`}
+                    alt={`2022 台灣九份民宿推薦房型${index}`}
                     className="body_introduce_img_item"
                   />
                 </div>
