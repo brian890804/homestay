@@ -93,3 +93,13 @@ button:focus-visible {
     border-left: 1px solid #f3f3f3;
   }
 }
+/* 滾輪 */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
