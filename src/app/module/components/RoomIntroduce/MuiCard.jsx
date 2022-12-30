@@ -43,7 +43,7 @@ function MuiCard({ item }) {
           height={isMobile ? "150" : "300"}
           src={item.img}
           draggable={false}
-          alt={`img ${item.name}`}
+          alt={`台灣九份民宿 ${item.name}`}
         />
       </div>
       <CardContent className="p-1">

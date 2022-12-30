@@ -33,7 +33,7 @@ export default function SwiperIntroduction() {
         {Roooms.map((data, index) => (
           <SwiperSlide key={index}>
             <img
-              alt=""
+              alt={"九份生活民宿資訊圖片"+index}
               src={data}
               loading={"lazy"}
               style={{

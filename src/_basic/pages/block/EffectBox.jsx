@@ -68,7 +68,7 @@ export default function EffectBox({ setBgOpen, show }) {
       onClick: onContactUs,
     },
     {
-      icon: <img src={LineIcon} alt="Line Icon" />,
+      icon: <img src={LineIcon} alt="九份生活民宿空間，賴馬上預定!" />,
       name: "Line",
       onClick: onOpenLine,
     },
