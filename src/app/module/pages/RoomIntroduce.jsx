@@ -28,6 +28,7 @@ import Room1_7 from "../../../assets/Room/Room1Introduce/Room1-7.png";
 import Room1_8 from "../../../assets/Room/Room1Introduce/Room1-8.png";
 import Room1_9 from "../../../assets/Room/Room1Introduce/Room1-9.png";
 import Room1_10 from "../../../assets/Room/Room1Introduce/Room1-10.png";
+import Room1_11 from "../../../assets/Room/Room1Introduce/Room1-11.png";
 
 import Room7_1 from "../../../assets/Room/Room7Introduce/Room7-1.png";
 import Room7_2 from "../../../assets/Room/Room7Introduce/Room7-2.png";
@@ -54,7 +55,7 @@ import Balcony_1 from "../../../assets/Room/Balcony/Balcony-1.png";
 import Balcony_2 from "../../../assets/Room/Balcony/Balcony-2.png";
 import Balcony_3 from "../../../assets/Room/Balcony/Balcony-3.png";
 
-const All = Array(15)
+const All = Array(16)
   .join(",")
   .split(",")
   .map((_, index) => {
@@ -64,13 +65,13 @@ let HouseImgItems = [
   {
     img: Room8,
     description:
-      "位於1樓入口處，客房裝潢以摩登時尚為基調，10平米大空間，溫馨舒適。(可加床>1人)",
+      "位於1樓入口處，客房裝潢以摩登時尚為基調，10坪米大空間，溫馨舒適。(可加床>1人)",
     name: "溫馨時光雙人房-附露臺",
-    price_tip:"平日:$2000/假日:$2500",
+    price_tip: "平日:$2000/假日:$2500",
     introduce: {
-      imgItems: [Room8_1, Room8_2, Room8_3, Room8_4],
+      imgItems: [Room1_11, Room8_1, Room8_3, Room8_4, Room8_2],
       title: "經典溫馨客房-大陽台",
-      option: All,
+      option: All.filter((_, index) => index !== 16),
       text: (
         <li>
           <ol>加床說明:</ol>
@@ -83,9 +84,9 @@ let HouseImgItems = [
   {
     img: Room1,
     description:
-      "位於2樓，客房裝潢以日式和風為基調，14.5平米超大空間，適合居家聊天歇憩。(可加床>4人)",
+      "位於2樓，客房裝潢以日式和風為基調，14.5坪米超大空間，適合居家聊天歇憩。(可加床>4人)",
     name: "日式典藏雙人房",
-    price_tip:"平日:$2800/假日:$3300",
+    price_tip: "平日:$2800/假日:$3300",
     introduce: {
       imgItems: [
         Room1_1,
@@ -96,11 +97,11 @@ let HouseImgItems = [
         Room1_6,
         Room1_7,
         Room1_8,
-        Room1_9,
         Room1_10,
+        Room1_9,
       ],
       title: "日式典藏和風客房-大客廳",
-      option: All,
+      option: All.filter((_, index) => index !== 2 && index !== 16),
       text: (
         <li>
           <ol>加床說明:</ol>
@@ -113,13 +114,13 @@ let HouseImgItems = [
   {
     img: Room7,
     description:
-      "位於2樓，客房裝潢以異國流行為基調，9.5平米大空間，溫馨舒適。(可加床>1人)",
-    name: "異國風情雙人房",
-    price_tip:"平日:$2000/假日:$2500",
+      "位於2樓，客房裝潢以異國流行為基調，9.5坪米大空間，溫馨舒適。(可加床>1人)",
+    name: "異國風情雙人房-附超大景緻陽台",
+    price_tip: "平日:$2000/假日:$2500",
     introduce: {
       imgItems: [Room7_1, Room7_2, Room7_3, Room7_4, Room7_5, Room7_6, Room7_7],
-      title: "異國風情雙人房",
-      option: [0,2,3,4,5,6,7,8,9,10,11,12,13,14],
+      title: "異國風情雙人房-附超大景緻陽台",
+      option: All.filter((_, index) => index !== 2 && index !== 16),
       text: (
         <li>
           <ol>加床說明:</ol>
@@ -132,37 +133,38 @@ let HouseImgItems = [
   {
     img: Room6,
     description:
-      "位於3樓，客房裝潢以舒適摩登為基調，9.5平米大空間，風景宜人舒適吊床。",
+      "位於3樓，客房裝潢以舒適摩登為基調，9.5坪米大空間，風景宜人舒適吊床。",
     name: "雅致舒適雙人房-附陽台",
-    price_tip:"平日:$2300/假日:$2800",
+    price_tip: "平日:$2300/假日:$2800",
     introduce: {
       imgItems: [Room6_1, Room6_2, Room6_3, Room6_4, Room6_5, Room6_6],
       title: "雅致舒適雙人房-附陽台",
-      option: All,
-      text: ""
+      option: [...All.filter((_, index) => index !== 2 ),17,18],
+      text: "",
     },
   },
   {
     img: Room2,
     description:
-      "位於3樓，客房裝潢以海洋空間為基調，13平米超大空間，躺在床上即可盡收一望無際海景。",
-    name: "異國風情雙人房-附陽台",
-    price_tip:"平日:$2800/假日:$3300",
+      "位於3樓，客房裝潢以海洋空間為基調，13坪米超大空間，躺在床上即可盡收一望無際海景。",
+    name: "異國風情雙人房-附超大景緻陽台",
+    price_tip: "平日:$2800/假日:$3300",
     introduce: {
       imgItems: [Room2_1, Room2_2, Room2_3, Room2_4, Room2_5],
-      title: "異國風情雙人房-附陽台",
-      option: All,
-      text: ""
+      title: "異國風情雙人房-附超大景緻陽台",
+      option: [...All.filter((_, index) => index !== 2 ),17,18],
+      text: "",
     },
   },
   {
     img: Balcony,
     description: "位於4樓頂樓，可盡收一望無際夜景。",
     name: "頂樓公共空間星空露臺",
-    price_tip:"",
+    price_tip: "",
     introduce: {
       imgItems: [Balcony_1, Balcony_2, Balcony_3],
       title: "頂樓公共空間星空露臺",
+      option: [15,16,18],
       text: (
         <li>
           <ol>其他說明:上頂樓前須於3F入口處更換室外拖鞋!</ol>

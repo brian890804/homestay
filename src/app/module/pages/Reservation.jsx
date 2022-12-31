@@ -24,7 +24,7 @@ export default function Reservation() {
             </Grid>
             <Grid item sm={6} xs={6} />
             <Grid item sm={12} xs={12} className="px-2 content">
-              進房Check in時間為下午04:00-23:30。
+              進房Check in時間為下午04:00-22:00。
             </Grid>
             <Grid item sm={12} xs={12} className="px-2 content">
               退房Check
@@ -60,7 +60,7 @@ export default function Reservation() {
                 <li>📍附設免費Wi-Fi，帳號密碼都在房間門上</li>
                 <li>📍加床每人加收500元/單加棉被加收清潔費$100元/單加枕頭加收清潔費$50元</li>
                 <li>📍本民宿沒有提供客房打掃服務</li>
-                <li>📍若未加床未滿120CM孩童不收費/滿7歲獲滿120cm皆須收費</li>
+                <li>📍若未加床未滿120CM孩童不收費/滿7歲或滿120cm皆須收費</li>
                 <li className="font_red">
                   📍訂房時將會收取30%訂金，剩餘費用於入住時收款
                   依照觀光局訂房規範:前2-3日取消訂房: 退訂金的30% 前1日取消訂房:

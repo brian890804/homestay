@@ -39,7 +39,7 @@ export default function LegalHomeStay() {
           {!isMobile && (
             <div className="row mt-2 ">
               {RoomItems.map((item, index) => (
-                <div className="col-4 p-1" key={index}>
+                <div className="col-4 " key={index}>
                   <img
                     loading={"lazy"}
                     src={item}
@@ -52,7 +52,11 @@ export default function LegalHomeStay() {
           )}
         </div>
         <div className="col-12">
-          <img src={view} className="body_introduce" alt="九份生活空間民宿Logo" />
+          <img
+            src={view}
+            className="body_introduce"
+            alt="九份生活空間民宿觀景台"
+          />
         </div>
       </div>
     </SecondPageElement>
@@ -72,12 +76,12 @@ const SecondPageElement = styled.div`
       &_img {
         &_license {
           object-fit: cover;
-          width: 100%;
+          width: 90%;
         }
 
         &_item {
           width: 100%;
-          height: 100%;
+          height: auto;
         }
       }
       &_text {

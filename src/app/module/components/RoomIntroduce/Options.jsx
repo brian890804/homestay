@@ -13,6 +13,9 @@ import terrace from "../../../../assets/Room/option/terrace.png";
 import towel from "../../../../assets/Room/option/towel.png";
 import tub from "../../../../assets/Room/option/tub.png";
 import wifi from "../../../../assets/Room/option/wifi.png";
+import view from "../../../../assets/Room/option/view.png";
+import sea from "../../../../assets/Room/option/sea.png";
+
 export const options = {
   0: { icon: sofa, text: "沙發" },
   1: { icon: tub, text: "浴缸" },
@@ -29,4 +32,9 @@ export const options = {
   12: { icon: hair_dryer, text: "吹風機" },
   13: { icon: magnetic_card, text: "客房感應卡" },
   14: { icon: shoe_dryer, text: "烘鞋機" },
+  15: { icon: view, text: "景觀" },
+  //other
+  16: { icon: slippers, text: "拖鞋" },
+  17: { icon: terrace, text: "陽台" },
+  18: { icon: sea, text: "海景" },
 };

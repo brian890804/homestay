@@ -26,7 +26,7 @@ export default function ContactUs() {
             <li>地址:新北勢瑞芳區九份烏勢港6號</li>
             <li>北縣觀光局批准合法民宿編號120號</li>
             <li>99年1月12日北府觀館字第0990879564號</li>
-            <li>版權所有為生活空閒民宿。</li>
+            <li>版權所有為生活空間民宿。</li>
           </ol>
         </Grid>
         <Grid item xs={12} sm={6}>
