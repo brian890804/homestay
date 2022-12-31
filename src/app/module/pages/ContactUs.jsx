@@ -30,7 +30,7 @@ export default function ContactUs() {
           </ol>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <img src={Line} alt="Line 導覽" style={{ width: "100%" }} />
+          <img src={Line} alt="九份民宿 九份生活空間民宿 Line 導覽" style={{ width: "100%" }} />
         </Grid>
       </Grid>
     </ContactUsElement>

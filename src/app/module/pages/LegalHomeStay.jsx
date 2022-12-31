@@ -52,7 +52,7 @@ export default function LegalHomeStay() {
           )}
         </div>
         <div className="col-12">
-          <img src={view} className="body_introduce" alt="logo" />
+          <img src={view} className="body_introduce" alt="九份生活空間民宿Logo" />
         </div>
       </div>
     </SecondPageElement>

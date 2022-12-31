@@ -31,7 +31,7 @@ export default function FloatIntroduce({ introduce, handleClick, closeShow }) {
             <SwiperSlide key={index}>
               <img
                 src={img}
-                alt={`${index} img`}
+                alt={`2023 九份民宿房型 ${index} img`}
                 className="wiper"
                 loading="lazy"
               />
