@@ -115,11 +115,11 @@ let HouseImgItems = [
     img: Room7,
     description:
       "位於2樓，客房裝潢以異國流行為基調，9.5坪米大空間，溫馨舒適。(可加床>1人)",
-    name: "異國風情雙人房-附超大景緻陽台",
+    name: "異國風情雙人房",
     price_tip: "平日:$2000/假日:$2500",
     introduce: {
       imgItems: [Room7_1, Room7_2, Room7_3, Room7_4, Room7_5, Room7_6, Room7_7],
-      title: "異國風情雙人房-附超大景緻陽台",
+      title: "異國風情雙人房",
       option: All.filter((_, index) => index !== 2 && index !== 16),
       text: (
         <li>
@@ -139,7 +139,7 @@ let HouseImgItems = [
     introduce: {
       imgItems: [Room6_1, Room6_2, Room6_3, Room6_4, Room6_5, Room6_6],
       title: "雅致舒適雙人房-附陽台",
-      option: [...All.filter((_, index) => index !== 2 ),17,18],
+      option: [...All.filter((_, index) => index !== 2), 17, 18],
       text: "",
     },
   },
@@ -152,7 +152,7 @@ let HouseImgItems = [
     introduce: {
       imgItems: [Room2_1, Room2_2, Room2_3, Room2_4, Room2_5],
       title: "異國風情雙人房-附超大景緻陽台",
-      option: [...All.filter((_, index) => index !== 2 ),17,18],
+      option: [...All.filter((_, index) => index !== 2), 17, 18],
       text: "",
     },
   },
@@ -164,7 +164,7 @@ let HouseImgItems = [
     introduce: {
       imgItems: [Balcony_1, Balcony_2, Balcony_3],
       title: "頂樓公共空間星空露臺",
-      option: [15,16,18],
+      option: [15, 16, 18],
       text: (
         <li>
           <ol>其他說明:上頂樓前須於3F入口處更換室外拖鞋!</ol>
@@ -177,18 +177,24 @@ export default function ThirdPage() {
   const { isMobile } = useResize();
 
   return (
-    <ThirdPageElement>
-      <Title id="roomIntroduce">房型介紹</Title>
-      <div className="content">
-        <Grid container direction="row" spacing={isMobile ? 1 : 2}>
-          {HouseImgItems.map((item) => (
-            <Grid item sm={6} xs={6} key={item.name}>
-              <MuiCard item={item} />
-            </Grid>
-          ))}
-        </Grid>
-      </div>
-    </ThirdPageElement>
+    <section>
+      <ThirdPageElement>
+        <header>
+          <h2>
+            <Title id="roomIntroduce">房型介紹</Title>
+          </h2>
+        </header>
+        <div className="content">
+          <Grid container direction="row" spacing={isMobile ? 1 : 2}>
+            {HouseImgItems.map((item) => (
+              <Grid item sm={6} xs={6} key={item.name}>
+                <MuiCard item={item} />
+              </Grid>
+            ))}
+          </Grid>
+        </div>
+      </ThirdPageElement>
+    </section>
   );
 }
 

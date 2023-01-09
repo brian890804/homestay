@@ -4,13 +4,13 @@ import SwiperIntroduction from "../components/MainPage/SwiperIntroduction";
 import Introduce from "../components/MainPage/Introduce";
 export default function MainPage() {
   return (
-    <div>
+    <section>
       <Title />
       <NavigationBar />
       <SwiperIntroduction />
-      <div className="mx-3 mt-3"style={{textAlign:'-webkit-center'}}>
+      <div className="mx-3 mt-3" style={{ textAlign: "-webkit-center" }}>
         <Introduce />
       </div>
-    </div>
+    </section>
   );
 }

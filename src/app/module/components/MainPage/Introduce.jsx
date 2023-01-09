@@ -14,14 +14,13 @@ export default function Introduce() {
 function Title() {
   const { isMobile } = useResize();
   return (
-    <div className={`fs-${isMobile ? 6 : 2} mt-5 mx-${isMobile ? 3 : 3} `}>
+    <div className={`fs-${isMobile ? 6 : 2} mt-2 mx-${isMobile ? 3 : 3} `}>
       <Grid
         className="text-start fw-bold  mb-2 g-bc"
         container
         direction="row"
         justifyContent="center"
         alignItems="center"
-        spacing={2}
         sx={{ whiteSpace: "nowrap" }}
       >
         <Grid
@@ -47,7 +46,7 @@ function Title() {
             fontSize: isMobile ? "0.6em" : "1em",
             lineHeight: isMobile ? 2.2 : 1.5,
             backgroundColor: "#fff",
-            padding: isMobile ? "1px 10px" : "3px 0px",
+            padding: isMobile ? "1px 10px" : "3px 0 0 0",
           }}
         >
           &nbsp; 鬧中取靜，隱身於老街巷內中!
@@ -76,7 +75,11 @@ function Content() {
     <ContentElement className="row pb-1">
       {Introduces.map((data, index) => (
         <div className="col-6 " key={index}>
-          <img src={data} alt={`九份民宿 房型${index}`}loading={"lazy"} />
+          <img
+            src={data}
+            alt={`九份 九份民宿 九份生活空間民宿 門牌介紹${index}`}
+            loading={"lazy"}
+          />
         </div>
       ))}
     </ContentElement>
@@ -88,5 +91,6 @@ const ContentElement = styled.div`
   img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 `;

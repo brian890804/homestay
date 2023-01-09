@@ -16,7 +16,7 @@ export default function FloatIntroduce({ introduce, handleClick, closeShow }) {
   const { imgItems, text, option, title } = introduce;
   return (
     <FloatIntroduceElement isMobile={isMobile}>
-      <div className="cover" onClick={closeShow}></div>
+      <div className="cover" onClick={closeShow} />
       <div className="float_container">
         <Swiper
           lazy
@@ -131,37 +131,40 @@ const FloatIntroduceElement = styled.div`
     }
 
     @media (min-width: 599px) {
-      width: auto;
-      min-height: 50vh;
-      max-width: 50vw;
+      min-width: 30vw;
+      max-width: 600px;
     }
   }
   .divider {
     background-color: black;
     height: 2px;
     width: 100%;
+  }
+  .mySwiper {
     @media (min-width: 599px) {
-      width: 40vw;
+      max-width: 1000px;
+      object-fit: cover;
     }
   }
+
   .float {
     &_container {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      bottom: 0;
-      display: flex;
+      bottom: 0%;
       z-index: 990;
+      display: flex;
       flex-flow: column;
       opacity: 1;
       align-items: center;
       justify-content: center;
       background-color: #fff;
       margin: 15% 0;
-      padding: 5%;
+      padding: 0 5%;
       @media (min-width: 599px) {
-        padding: 0%;
+        padding: 0 5%;
         margin: 0% 15%;
       }
       &_icon {
@@ -183,7 +186,7 @@ const FloatIntroduceElement = styled.div`
         justify-content: center;
         width: 100%;
         @media (min-width: 599px) {
-          max-width: 40vw;
+          max-width: 1000px;
         }
       }
 

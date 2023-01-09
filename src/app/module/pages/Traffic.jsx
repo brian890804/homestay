@@ -1,140 +1,44 @@
-import { useState, useCallback } from "react";
 import Title from "../../../_basic/pages/toolbar/Title";
 import map from "../../../assets/Traffic/map.png";
 import position from "../../../assets/Traffic/position.png";
-import useResize from "../Event/Resize";
 
-import IconButton from "@mui/material/IconButton";
-import AltRouteIcon from "@mui/icons-material/AltRoute";
 import styled from "@emotion/styled";
-import GoogleMapReact from "google-map-react";
-import RoomIcon from "@mui/icons-material/Room";
-
-const LandMark = ({ text, setShow }) => {
-  const onClick = useCallback(() => setShow((pre) => !pre));
-  return (
-    <LandMarkElement onClick={onClick}>
-      <RoomIcon color="warning" fontSize="large" />
-    </LandMarkElement>
-  );
-};
-const LandMarkElement = styled.div``;
-
-const PositionTip = () => {
-  const { isMobile } = useResize();
-  const toGoogleRoute = useCallback(
-    () => window.open(import.meta.env.VITE_GOOGLEMAP_URL_ROUTE),
-    []
-  );
-  return (
-    <PositionTipElement>
-      <div className="row ">
-        <div className="col-sm-12 col-8 title">九份生活民宿</div>
-        {!isMobile && (
-          <div className="col-sm-9  address mb-2">224新北市瑞芳區烏勢巷6號</div>
-        )}
-
-        <div className="col-sm-3 col-4">
-          <IconButton onClick={toGoogleRoute}>
-            <AltRouteIcon
-              fontSize={isMobile ? "small" : "large"}
-              color="primary"
-            />
-          </IconButton>
-        </div>
-        <div className="col-12 detail">
-          <a
-            href={import.meta.env.VITE_GOOGLEMAP_URL_POSITION}
-            target={"_blank"}
-          >
-            顯示詳細地圖
-          </a>
-        </div>
-      </div>
-    </PositionTipElement>
-  );
-};
-const PositionTipElement = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  max-width: 35%;
-  margin: 2%;
-  padding: 1%;
-  display: flex;
-  border-radius: 5px;
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  animation: fadeIn 2s ease;
-  .title {
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-  .address {
-    font-size: 0.8rem;
-    font-weight: 500;
-  }
-
-  @media (max-width: 599px) {
-    max-width: 40%;
-    .title {
-      font-size: 0.8rem;
-    }
-
-    .detail {
-      font-size: 0.4rem;
-    }
-  }
-`;
 
 export default function Traffic() {
-  const defaultProps = {
-    center: {
-      lat: 25.1088259,
-      lng: 121.8454517,
-    },
-    zoom: 19.52,
-  };
-  const [show, setShow] = useState(false);
   return (
     <TrafficElement>
-      <Title id="traffic">交通導引</Title>
-      <div className="topArea">
-        <div className="mr-2">
-          <img src={map} alt="九份生活空間民宿 交通指引圖" className="img" />
-        </div>
-        <div className="ml-2">
-          <img src={position} alt="GoogleMap 九份生活空間民宿" className="img" />
-        </div>
-      </div>
-      <div className="bottomArea">
-        <div style={{ height: "30vh", position: "relative" }}>
-          <GoogleMapReact
-            yesIWantToUseGoogleMapApiInternals
-            bootstrapURLKeys={{ key: import.meta.env.VITE_GOOGLEMAP_KEY }}
-            defaultCenter={defaultProps.center}
-            defaultZoom={defaultProps.zoom}
-          >
-            <LandMark
-              lat={25.1088259}
-              lng={121.8454517}
-              text="My Marker"
-              setShow={setShow}
+      <section>
+        <header>
+          <h2>
+            <Title id="traffic">交通導引</Title>
+          </h2>
+        </header>
+        <div className="topArea">
+          <div className="mr-2">
+            <img src={map} alt="九份生活空間民宿 交通指引圖" className="img" />
+          </div>
+          <div className="ml-2">
+            <img
+              src={position}
+              alt="GoogleMap 九份生活空間民宿"
+              className="img"
             />
-          </GoogleMapReact>
-          {show && <PositionTip />}
+          </div>
         </div>
-      </div>
+        <div className="bottomArea">
+          <div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1806.3980032916104!2d121.84475700104075!3d25.108765798223853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d451811463bbf%3A0x5f2219e9cb9e39d6!2z55Sf5rS756m66ZaT5rCR5a6_!5e0!3m2!1szh-TW!2stw!4v1673019947388!5m2!1szh-TW!2stw"
+              width={"100%"}
+              height={450}
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+      </section>
     </TrafficElement>
   );
 }
@@ -153,7 +57,6 @@ const TrafficElement = styled.div`
     margin-bottom: 20px;
   }
   .img {
-    margin: 5px;
     width: 100%;
   }
 `;

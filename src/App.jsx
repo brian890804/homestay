@@ -12,7 +12,7 @@ function App() {
   JudeWheel(set);
 
   return (
-    <div
+    <main
       style={{
         backgroundColor: "#fff",
         userSelect: "none",
@@ -41,7 +41,7 @@ function App() {
       >
         <Routes show={show} />
       </Suspense>
-    </div>
+    </main>
   );
 }
 

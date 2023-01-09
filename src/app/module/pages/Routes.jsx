@@ -1,4 +1,4 @@
-import { useState, lazy } from "react";
+import React, { useState, lazy } from "react";
 import MainPage from "./MainPage";
 import EffectBox from "../../../_basic/pages/block/EffectBox";
 
@@ -12,16 +12,18 @@ const FooterIntroduce = lazy(() => import("./FooterIntroduce"));
 export default function Routes({ show }) {
   const [bgOpen, setBgOpen] = useState(false);
   return (
-    <>
-      <EffectBox show={show} setBgOpen={setBgOpen} />
-      <Backdrop open={bgOpen && show} sx={{ zIndex: 100 }} />
-      <MainPage />
-      <LegalHomeStay />
-      <RoomIntroduce />
-      <Reservation />
-      <Traffic />
-      <ContactUs />
-      <FooterIntroduce />
-    </>
+    <React.Fragment>
+      <section>
+        <EffectBox show={show} setBgOpen={setBgOpen} />
+        <Backdrop open={bgOpen && show} sx={{ zIndex: 100 }} />
+        <MainPage />
+        <LegalHomeStay />
+        <RoomIntroduce />
+        <Reservation />
+        <Traffic />
+        <ContactUs />
+        <FooterIntroduce />
+      </section>
+    </React.Fragment>
   );
 }

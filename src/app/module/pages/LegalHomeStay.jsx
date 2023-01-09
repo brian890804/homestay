@@ -11,55 +11,60 @@ export default function LegalHomeStay() {
   const RoomItems = [View1, View2, View3];
   const { isMobile } = useResize();
   return (
-    <SecondPageElement>
-      <Title id="legalHomeStay">新北市合法民宿</Title>
-      <div className="row body justify-content-center">
-        <div className="col-lg-4 col-6 mb-3 ">
-          <img
-            src={license}
-            className="body_introduce_img_license"
-            alt="logo"
-          />
-        </div>
-        <div
-          className={`
+    <section>
+      <SecondPageElement>
+        <header>
+          <h2>
+            <Title id="legalHomeStay">新北市合法民宿</Title>
+          </h2>
+        </header>
+        <div className="row body justify-content-center">
+          <div className="col-lg-4 col-6 mb-3 ">
+            <img
+              src={license}
+              className="body_introduce_img_license"
+              alt="logo"
+            />
+          </div>
+          <div
+            className={`
                     col-lg-8
                     col-12 
-                    text-start 
                     fw-bold fs-6
                     `}
-        >
-          <div className="row">
-            <div className="col-12 body_introduce_text">
-              版權所有為生活空間民宿。電話：0986310045 地址：
-              新北市瑞芳區九份烏勢巷6號 {!isMobile && <br />}北縣
-              觀光局核准合法民宿編號120號 99年1月12日北府觀管字第0990879564號
+          >
+            <div className="row">
+              <div className="col-12 body_introduce_text">
+                版權所有為生活空間民宿。電話：0986310045 地址：
+                新北市瑞芳區九份烏勢巷6號 {!isMobile && <br />}北縣
+                觀光局核准合法民宿編號120號 99年1月12日北府觀管字第0990879564號
+              </div>
             </div>
+            {!isMobile && (
+              <div className="row mt-2 my-1">
+                {RoomItems.map((item, index) => (
+                  <div className="col-4 " key={index}>
+                    <img
+                      loading={"lazy"}
+                      src={item}
+                      alt={`2022 台灣九份民宿推薦房型${index}`}
+                      className="body_introduce_img_item"
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
-          {!isMobile && (
-            <div className="row mt-2 ">
-              {RoomItems.map((item, index) => (
-                <div className="col-4 " key={index}>
-                  <img
-                    loading={"lazy"}
-                    src={item}
-                    alt={`2022 台灣九份民宿推薦房型${index}`}
-                    className="body_introduce_img_item"
-                  />
-                </div>
-              ))}
-            </div>
-          )}
+          <div className="col-12">
+            <img
+              src={view}
+              className="body_introduce"
+              alt="九份生活空間民宿觀景台"
+            />
+          </div>
         </div>
-        <div className="col-12">
-          <img
-            src={view}
-            className="body_introduce"
-            alt="九份生活空間民宿觀景台"
-          />
-        </div>
-      </div>
-    </SecondPageElement>
+      </SecondPageElement>
+    </section>
   );
 }
 
@@ -75,13 +80,12 @@ const SecondPageElement = styled.div`
       height: auto;
       &_img {
         &_license {
-          object-fit: cover;
-          width: 90%;
+          width: 100%;
         }
 
         &_item {
           width: 100%;
-          height: auto;
+          height: 100%;
         }
       }
       &_text {
