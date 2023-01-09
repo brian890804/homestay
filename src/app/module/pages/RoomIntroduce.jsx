@@ -71,7 +71,7 @@ let HouseImgItems = [
     introduce: {
       imgItems: [Room1_11, Room8_1, Room8_3, Room8_4, Room8_2],
       title: "經典溫馨客房-大陽台",
-      option: All.filter((_, index) => index !== 16),
+      option: All.filter((_, index) => index !== 16&& index !== 15),
       text: (
         <li>
           <ol>加床說明:</ol>
@@ -115,12 +115,12 @@ let HouseImgItems = [
     img: Room7,
     description:
       "位於2樓，客房裝潢以異國流行為基調，9.5坪米大空間，溫馨舒適。(可加床>1人)",
-    name: "異國風情雙人房",
+    name: "雅致舒適雙人房-附陽台",
     price_tip: "平日:$2000/假日:$2500",
     introduce: {
       imgItems: [Room7_1, Room7_2, Room7_3, Room7_4, Room7_5, Room7_6, Room7_7],
-      title: "異國風情雙人房",
-      option: All.filter((_, index) => index !== 2 && index !== 16),
+      title: "雅致舒適雙人房-附陽台",
+      option: All.filter((_, index) => index !== 2 && index !== 16&& index !== 15),
       text: (
         <li>
           <ol>加床說明:</ol>
@@ -134,11 +134,11 @@ let HouseImgItems = [
     img: Room6,
     description:
       "位於3樓，客房裝潢以舒適摩登為基調，9.5坪米大空間，風景宜人舒適吊床。",
-    name: "雅致舒適雙人房-附陽台",
+    name: "景觀舒適雙人房",
     price_tip: "平日:$2300/假日:$2800",
     introduce: {
       imgItems: [Room6_1, Room6_2, Room6_3, Room6_4, Room6_5, Room6_6],
-      title: "雅致舒適雙人房-附陽台",
+      title: "景觀舒適雙人房",
       option: [...All.filter((_, index) => index !== 2), 17, 18],
       text: "",
     },

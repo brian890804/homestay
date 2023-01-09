@@ -133,6 +133,7 @@ const FloatIntroduceElement = styled.div`
     @media (min-width: 599px) {
       min-width: 30vw;
       max-width: 600px;
+      max-height: 600px;
     }
   }
   .divider {
