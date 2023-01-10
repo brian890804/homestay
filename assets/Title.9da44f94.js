@@ -1,0 +1,1 @@
+import{u as s}from"./Routes.9387a145.js";import{j as o}from"./index.a8518a52.js";function c({children:t,id:i}){const{isMobile:e}=s();return o("div",{id:i,className:"g-bc g-center text-white fw-bold ",style:{height:e?40:70,fontSize:e?"1rem":"2rem"},children:t})}export{c as T};
