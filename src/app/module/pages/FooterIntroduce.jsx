@@ -108,11 +108,11 @@ export default function FooterIntroduce() {
         >
           <Grid item sm={7} xs={7}>
             <label className="title_purple_block mr-2">&nbsp;</label>
-            九份總店
+            九份店
           </Grid>
           <Grid item sm={5} xs={5}>
             <label className="title_purple_block mr-2">&nbsp;</label>
-            台北分店
+            台北店
           </Grid>
         </Grid>
         <Grid
@@ -131,7 +131,7 @@ export default function FooterIntroduce() {
               spacing={1}
             >
               <Grid item xs={12}>
-                九份總店：台北縣瑞芳鎮九份汽車路18號(7-11的對面)
+                九份店：台北縣瑞芳鎮九份汽車路18號(7-11的對面)
               </Grid>
               <Grid item xs={12} sm={6}>
                 訂貨專線：(02)2496-5628
@@ -148,11 +148,17 @@ export default function FooterIntroduce() {
               <Grid item xs={12} sm={6}>
                 營業時間：9:00-17:00
               </Grid>
+              <Grid item xs={12} sx={{ paddingTop: "1.5%" }}>
+                LINE ID：lwzin8
+              </Grid>
+              <Grid item xs={12} sx={{ paddingTop: "1.5%" }}>
+                Wechat：lwzin8
+              </Grid>
             </Grid>
           </Grid>
           <Grid item sm={5} xs={5}>
             <Grid item xs={12}>
-              台北分店：台北市中正區忠孝西路一段50-1號 (Z區地下街No.
+              台北店：台北市中正區忠孝西路一段50-1號 (Z區地下街No.
               6-3A,Z3出口旁)
             </Grid>
             <Grid item xs={12} sx={{ paddingTop: "1.5%" }}>
@@ -160,6 +166,12 @@ export default function FooterIntroduce() {
             </Grid>
             <Grid item xs={12} sx={{ paddingTop: "1.5%" }}>
               營業時間：12:00-20:00
+            </Grid>
+            <Grid item xs={12} sx={{ paddingTop: "1.5%" }}>
+              LINE ID：lwzin7
+            </Grid>
+            <Grid item xs={12} sx={{ paddingTop: "1.5%" }}>
+              Wechat：lwzin7
             </Grid>
           </Grid>
         </Grid>

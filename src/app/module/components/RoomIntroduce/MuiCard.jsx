@@ -42,7 +42,6 @@ function MuiCard({ item }) {
           className="img"
           height={isMobile ? "150" : "300"}
           src={item.img}
-          draggable={false}
           alt={`台灣九份民宿 ${item.name}`}
         />
       </div>

@@ -17,11 +17,11 @@ export default function Routes({ show }) {
         <EffectBox show={show} setBgOpen={setBgOpen} />
         <Backdrop open={bgOpen && show} sx={{ zIndex: 100 }} />
         <MainPage />
-        <LegalHomeStay />
         <RoomIntroduce />
         <Reservation />
         <Traffic />
         <ContactUs />
+        <LegalHomeStay />
         <FooterIntroduce />
       </section>
     </React.Fragment>

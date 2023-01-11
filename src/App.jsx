@@ -15,7 +15,6 @@ function App() {
     <main
       style={{
         backgroundColor: "#fff",
-        userSelect: "none",
         minHeight: "100vh",
         height: "100%",
         overflowY: "auto",

@@ -12,7 +12,7 @@ import Room6 from "../../../../assets/Room/Room6.png";
 import Calendar from "../../../../assets/Room/calendar.png";
 
 import SwiperCore, { Pagination, Autoplay } from "swiper";
-import { useTransition, animated, useSpring } from "@react-spring/web";
+import { useTransition, animated } from "@react-spring/web";
 import styles from "../css/MainPage/RoomIntroduction.css";
 import useResize from "../../Event/Resize";
 export default function SwiperIntroduction() {
@@ -21,7 +21,6 @@ export default function SwiperIntroduction() {
   return (
     <>
       <Swiper
-        lazy
         className="mySwiper"
         modules={[Pagination]}
         autoplay={{ delay: 5000 }}
